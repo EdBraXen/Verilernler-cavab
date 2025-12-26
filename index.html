@@ -36,7 +36,7 @@
             <h1 class="text-3xl font-bold text-slate-800">Verilenler Cavablari</h1>
         </div>
         
-        <div id="input-section" class="bg-white p-6 rounded-lg shadow-md border border-slate-200" style="display: none;">
+        <div id="input-section" class="bg-white p-6 rounded-lg shadow-md border border-slate-200 hidden">
             <div id="content-file">
                 <div class="text-center mb-4">
                     <label class="block text-sm text-slate-500 mb-1">Kodlaşdırma (Hərflər düz çıxmazsa dəyişin):</label>
@@ -72,63 +72,43 @@
                     <div class="border-t border-slate-100 p-5 bg-white content-area hidden">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">💰 Elektronika Mağazası Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;💰 Elektronika Mağazası Tapşırığı&lt;/h1&gt;
-
-&lt;p&gt;
 Bir şəxs müəyyən büdcə daxilində əldə edə biləcəyi ən bahalı klaviatura və
 USB yaddaş qurğusunun birgə qiymətini tapmaq istəyir.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Klaviatura və USB qiymətləri verilmiş siyahılardan seçilməlidir&lt;/li&gt;
-  &lt;li&gt;Hər iki məhsulu almaq mümkündürsə ümumi xərci qaytarın&lt;/li&gt;
-  &lt;li&gt;Əgər hər iki məhsulu almaq mümkün deyilsə, nəticə -1 olmalıdır&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Klaviatura və USB qiymətləri verilmiş siyahılardan seçilməlidir
+- Hər iki məhsulu almaq mümkündürsə ümumi xərci qaytarın
+- Əgər hər iki məhsulu almaq mümkün deyilsə, nəticə -1 olmalıdır
+
+🧩 Funksiya
+
 getMoneySpent(int[] keyboards, int[] drives, int b)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;Xərc edilə biləcək maksimum məbləğ (&lt;strong&gt;int&lt;/strong&gt;), və ya mümkün deyilsə &lt;code&gt;-1&lt;/code&gt;&lt;/p&gt;
+🔁 Qaytarır
+Xərc edilə biləcək maksimum məbləğ (int), və ya mümkün deyilsə -1
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Hər iki məhsul alınmalıdır&lt;/li&gt;
-  &lt;li&gt;Qiymətlərin cəmi büdcədən böyük olmamalıdır&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+Qeyd:
+- Hər iki məhsul alınmalıdır
+- Qiymətlərin cəmi büdcədən böyük olmamalıdır
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyət&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;1 ≤ n, m ≤ 1000&lt;/li&gt;
-  &lt;li&gt;1 ≤ b ≤ 10⁶&lt;/li&gt;
-  &lt;li&gt;Hər məhsulun qiyməti 1 ≤ qiymət ≤ 10⁶&lt;/li&gt;
-&lt;/ul&gt;
+⚙️ Məhdudiyyət
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Nümunə&lt;/h3&gt;
-&lt;p&gt;Büdcə: &lt;code&gt;b = 60&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Klaviaturalar: &lt;code&gt;[40, 50, 60]&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;USB-lər: &lt;code&gt;[5, 8, 12]&lt;/code&gt;&lt;/p&gt;
+- 1 ≤ n, m ≤ 1000
+- 1 ≤ b ≤ 10⁶
+- Hər məhsulun qiyməti 1 ≤ qiymət ≤ 10⁶
 
-&lt;p&gt;Mümkün seçimlər:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;40 + 12 = 52&lt;/li&gt;
-  &lt;li&gt;50 + 8 = 58 → ən bahalı uyğun seçim, nəticə 58&lt;/li&gt;
-&lt;/ul&gt;
+📥 Nümunə
+Büdcə: b = 60
+Klaviaturalar: [40, 50, 60]
+USB-lər: [5, 8, 12]
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+Mümkün seçimlər:
+
+- 40 + 12 = 52
+- 50 + 8 = 58 → ən bahalı uyğun seçim, nəticə 58</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -170,53 +150,32 @@ getMoneySpent(int[] keyboards, int[] drives, int b)
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🪜 Pilləkən Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Bu tapşırıqda ölçüsü n olan bir pilləkən yaradılmalıdır.
+Pilləkənin bazası və hündürlüyü n-ə bərabərdir.
 
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🪜 Pilləkən Tapşırığı&lt;/h1&gt;
+📌 Tapşırığın Şərti
 
-&lt;p&gt;
-Bu tapşırıqda ölçüsü &lt;strong&gt;n&lt;/strong&gt; olan bir pilləkən yaradılmalıdır.
-Pilləkənin bazası və hündürlüyü &lt;strong&gt;n&lt;/strong&gt;-ə bərabərdir.
-&lt;/p&gt;
+- Pilləkən # simvollarından və boşluqlardan ibarət olmalıdır
+- Bütün sətirlər sağa dayanıqlı şəkildə formalaşdırılmalıdır
+- Son sətir boşluqla başlamamalıdır
+- Nəticə String kimi qaytarılmalıdır
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Pilləkən &lt;strong&gt;#&lt;/strong&gt; simvollarından və boşluqlardan ibarət olmalıdır&lt;/li&gt;
-  &lt;li&gt;Bütün sətirlər &lt;strong&gt;sağa dayanıqlı&lt;/strong&gt; şəkildə formalaşdırılmalıdır&lt;/li&gt;
-  &lt;li&gt;Son sətir boşluqla başlamamalıdır&lt;/li&gt;
-  &lt;li&gt;Nəticə &lt;strong&gt;String&lt;/strong&gt; kimi qaytarılmalıdır&lt;/li&gt;
-&lt;/ul&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 staircase(int n)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;Pilləkənin tam mətni (&lt;strong&gt;String&lt;/strong&gt;) qaytarılmalıdır.&lt;/p&gt;
+🔁 Qaytarır
+Pilləkənin tam mətni (String) qaytarılmalıdır.
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Heç bir şey çap edilməməlidir&lt;/li&gt;
-  &lt;li&gt;Bütün sətirlər sağa uyğunlaşdırılmalıdır&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+Qeyd:
+- Heç bir şey çap edilməməlidir
+- Bütün sətirlər sağa uyğunlaşdırılmalıdır
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyət&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-0 &amp;lt; n ≤ 100
-&lt;/code&gt;
-&lt;/p&gt;
+⚙️ Məhdudiyyət
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+0 &amp;lt; n ≤ 100</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -259,59 +218,35 @@ staircase(int n)
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🎂 Doğum Günü Tortu Şamları Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🎂 Doğum Günü Tortu Şamları Tapşırığı&lt;/h1&gt;
-
-&lt;p&gt;
 Bu tapşırıqda uşağın doğum günü üçün verilmiş şamların hündürlükləri əsasında ən uzun şamların sayını tapmaq lazımdır.
 Uşaqlar yalnız ən uzun şamları üfürə biləcəklər.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Verilən &lt;strong&gt;candles&lt;/strong&gt; massivində hər bir şamın hündürlüyü verilir.&lt;/li&gt;
-  &lt;li&gt;Funksiya, ən uzun şamların sayını tapmalıdır.&lt;/li&gt;
-  &lt;li&gt;Ən uzun şamların sayını qaytarın.&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Verilən candles massivində hər bir şamın hündürlüyü verilir.
+- Funksiya, ən uzun şamların sayını tapmalıdır.
+- Ən uzun şamların sayını qaytarın.
+
+🧩 Funksiya
+
 birthdayCakeCandles(int n, List&lt;int&gt; candles)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 Funksiya, ən uzun şamların sayını (tam ədəd) qaytarır.
-&lt;/p&gt;
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Verilən &lt;strong&gt;candles&lt;/strong&gt; massivində n sayda şamın hündürlüyü olacaq.&lt;/li&gt;
-  &lt;li&gt;Funksiya, yalnız ən uzun şamların sayını tapmalı və onu qaytarmalıdır.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyət&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Verilən candles massivində n sayda şamın hündürlüyü olacaq.
+- Funksiya, yalnız ən uzun şamların sayını tapmalı və onu qaytarmalıdır.
+
+⚙️ Məhdudiyyət
+
 1 ≤ n ≤ 100,000
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-1 ≤ candles[i] ≤ 10,000,000
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+1 ≤ candles[i] ≤ 10,000,000</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -354,70 +289,43 @@ Funksiya, ən uzun şamların sayını (tam ədəd) qaytarır.
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🎓 Tələbə Qiymətlərinin Yuvarlaqlaşdırılması
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Universitetin qiymətləndirmə siyasətinə əsasən hər tələbə 0–100 aralığında qiymət alır.
+40-dan aşağı qiymətlər uğursuz hesab olunur.
 
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🎓 Tələbə Qiymətlərinin Yuvarlaqlaşdırılması&lt;/h1&gt;
-
-&lt;p&gt;
-Universitetin qiymətləndirmə siyasətinə əsasən hər tələbə &lt;strong&gt;0–100&lt;/strong&gt; aralığında qiymət alır.
-&lt;strong&gt;40-dan aşağı&lt;/strong&gt; qiymətlər uğursuz hesab olunur.
-&lt;/p&gt;
-
-&lt;p&gt;
 Sam adlı müəllim qiymətləri aşağıdakı qaydalara əsasən yuvarlaqlaşdırır.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Əgər qiymət ilə növbəti &lt;strong&gt;5-ə bölünən ədəd&lt;/strong&gt; arasındakı fərq &lt;strong&gt;3-dən azdırsa&lt;/strong&gt;,
-      qiymət yuxarı yuvarlaqlaşdırılır.&lt;/li&gt;
-  &lt;li&gt;Əgər qiymət &lt;strong&gt;38-dən kiçikdirsə&lt;/strong&gt;, yuvarlaqlaşdırma aparılmır.&lt;/li&gt;
-  &lt;li&gt;Hər tələbənin son qiymətini hesablayın.&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Əgər qiymət ilə növbəti 5-ə bölünən ədəd arasındakı fərq 3-dən azdırsa,
+      qiymət yuxarı yuvarlaqlaşdırılır.
+- Əgər qiymət 38-dən kiçikdirsə, yuvarlaqlaşdırma aparılmır.
+- Hər tələbənin son qiymətini hesablayın.
+
+🧩 Funksiya
+
 gradingStudents(int[] grades)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-Yuvarlaqlaşdırılmış qiymətləri saxlayan &lt;strong&gt;tam ədədlər massivi&lt;/strong&gt; (&lt;strong&gt;int[]&lt;/strong&gt;).
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Qiymətlər ardıcıl olaraq emal edilməlidir&lt;/li&gt;
-  &lt;li&gt;Qiymət uğursuz olaraq qalırsa dəyişdirilməməlidir&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+Yuvarlaqlaşdırılmış qiymətləri saxlayan tam ədədlər massivi (int[]).
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;İlk sətirdə &lt;strong&gt;n&lt;/strong&gt; — tələbələrin sayı&lt;/li&gt;
-  &lt;li&gt;Növbəti sətirlərdə &lt;strong&gt;grades[i]&lt;/strong&gt; — hər tələbənin qiyməti&lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Qiymətlər ardıcıl olaraq emal edilməlidir
+- Qiymət uğursuz olaraq qalırsa dəyişdirilməməlidir
+
+📥 Giriş Formatı
+
+- İlk sətirdə n — tələbələrin sayı
+- Növbəti sətirlərdə grades[i] — hər tələbənin qiyməti
+
+⚙️ Məhdudiyyətlər
+
 1 ≤ n ≤ 60
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-0 ≤ grades[i] &amp;lt; 100
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+0 ≤ grades[i] &amp;lt; 100</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -461,75 +369,47 @@ Yuvarlaqlaşdırılmış qiymətləri saxlayan &lt;strong&gt;tam ədədlər mass
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🐱🐱🐭 Pişik və Siçan Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🐱🐱🐭 Pişik və Siçan Tapşırığı&lt;/h1&gt;
-
-&lt;p&gt;
-Xətt üzərində iki pişik (&lt;strong&gt;Cat A&lt;/strong&gt; və &lt;strong&gt;Cat B&lt;/strong&gt;) və bir siçan (&lt;strong&gt;Mouse C&lt;/strong&gt;)
+Xətt üzərində iki pişik (Cat A və Cat B) və bir siçan (Mouse C)
 müxtəlif mövqelərdə yerləşir.
 Siçan hərəkət etmir və pişiklər eyni sürətlə hərəkət edir.
-&lt;/p&gt;
 
-&lt;p&gt;
 Tapşırığınız hansı pişiyin siçana daha tez çatacağını müəyyənləşdirməkdir.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Pişiklərin siçana olan məsafələri müqayisə edilməlidir&lt;/li&gt;
-  &lt;li&gt;Ən yaxın pişik qalib hesab olunur&lt;/li&gt;
-  &lt;li&gt;Əgər məsafələr bərabərdirsə, siçan qaçır&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Pişiklərin siçana olan məsafələri müqayisə edilməlidir
+- Ən yaxın pişik qalib hesab olunur
+- Əgər məsafələr bərabərdirsə, siçan qaçır
+
+🧩 Funksiya
+
 catAndMouse(int x, int y, int z)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 Aşağıdakı sətirlərdən birini qaytarmalıdır:
-&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;"Cat A"&lt;/strong&gt; — əgər A pişiyi daha tez çatırsa&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;"Cat B"&lt;/strong&gt; — əgər B pişiyi daha tez çatırsa&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;"Mouse C"&lt;/strong&gt; — əgər pişiklər eyni vaxtda çatırsa&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Məsafə &lt;strong&gt;modul fərq&lt;/strong&gt; (|x − z|) ilə hesablanmalıdır&lt;/li&gt;
-  &lt;li&gt;Siçan hərəkət etmir&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+- "Cat A" — əgər A pişiyi daha tez çatırsa
+- "Cat B" — əgər B pişiyi daha tez çatırsa
+- "Mouse C" — əgər pişiklər eyni vaxtda çatırsa
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;İlk sətirdə &lt;strong&gt;q&lt;/strong&gt; — sorğuların sayı&lt;/li&gt;
-  &lt;li&gt;Növbəti &lt;strong&gt;q&lt;/strong&gt; sətirdə üç tam ədəd: &lt;strong&gt;x y z&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Məsafə modul fərq (|x − z|) ilə hesablanmalıdır
+- Siçan hərəkət etmir
+
+📥 Giriş Formatı
+
+- İlk sətirdə q — sorğuların sayı
+- Növbəti q sətirdə üç tam ədəd: x y z
+
+⚙️ Məhdudiyyətlər
+
 1 ≤ q ≤ 100
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-1 ≤ x, y, z &amp;lt; 100
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+1 ≤ x, y, z &amp;lt; 100</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -566,65 +446,40 @@ Aşağıdakı sətirlərdən birini qaytarmalıdır:
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">📊 Mini-Max Cəmi Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;📊 Mini-Max Cəmi Tapşırığı&lt;/h1&gt;
-
-&lt;p&gt;
-Bu tapşırıqda &lt;strong&gt;5 tam ədəd&lt;/strong&gt; verilir.
-Tapşırıq bu ədədlərin &lt;strong&gt;dördünün cəmlərindən&lt;/strong&gt; alınan
+Bu tapşırıqda 5 tam ədəd verilir.
+Tapşırıq bu ədədlərin dördünün cəmlərindən alınan
 ən kiçik və ən böyük nəticələri tapmaqdır.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Minimum cəm&lt;/strong&gt;: ən böyük ədəd çıxılaraq qalan 4 ədədin cəmi&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Maksimum cəm&lt;/strong&gt;: ən kiçik ədəd çıxılaraq qalan 4 ədədin cəmi&lt;/li&gt;
-  &lt;li&gt;Nəticə &lt;strong&gt;"minSum maxSum"&lt;/strong&gt; formatında qaytarılmalıdır&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Minimum cəm: ən böyük ədəd çıxılaraq qalan 4 ədədin cəmi
+- Maksimum cəm: ən kiçik ədəd çıxılaraq qalan 4 ədədin cəmi
+- Nəticə "minSum maxSum" formatında qaytarılmalıdır
+
+🧩 Funksiya
+
 miniMaxSum(int[] arr)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-&lt;strong&gt;String&lt;/strong&gt; — &lt;code&gt;"minSum maxSum"&lt;/code&gt; formatında nəticə qaytarılmalıdır.
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Funksiya &lt;strong&gt;heç nə çap ETMƏMƏLİDİR&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Yalnız nəticəni &lt;strong&gt;String&lt;/strong&gt; kimi qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+String — "minSum maxSum" formatında nəticə qaytarılmalıdır.
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir sətirdə &lt;strong&gt;5 məkanla ayrılmış tam ədəd&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Funksiya heç nə çap ETMƏMƏLİDİR
+- Yalnız nəticəni String kimi qaytarmalıdır
+
+📥 Giriş Formatı
+
+- Bir sətirdə 5 məkanla ayrılmış tam ədəd
+
+⚙️ Məhdudiyyətlər
+
 arr.length = 5
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-1 ≤ arr[i] ≤ 10⁹
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+1 ≤ arr[i] ≤ 10⁹</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -670,90 +525,54 @@ arr.length = 5
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">😠 Angry Professor Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;😠 Angry Professor Tapşırığı&lt;/h1&gt;
-
-&lt;p&gt;
 Diskret Riyaziyyat professoru dərsdə disiplin çatışmazlığından narazıdır.
-Əgər dərs başlamazdan əvvəl &lt;strong&gt;minimum tələbə sayı&lt;/strong&gt; qədər tələbə vaxtında gəlməzsə,
-professor dərsi &lt;strong&gt;ləğv edir&lt;/strong&gt;.
-&lt;/p&gt;
+Əgər dərs başlamazdan əvvəl minimum tələbə sayı qədər tələbə vaxtında gəlməzsə,
+professor dərsi ləğv edir.
 
-&lt;p&gt;
 Tələbələrin gəliş vaxtları və minimum iştirakçı sayı verildikdə,
 dərsin ləğv olunub-olunmayacağını müəyyənləşdirməlisiniz.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;arrivalTime &amp;lt;= 0&lt;/strong&gt; → tələbə vaxtında gəlmiş sayılır&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;arrivalTime &amp;gt; 0&lt;/strong&gt; → tələbə gecikmiş sayılır&lt;/li&gt;
-  &lt;li&gt;Vaxtında gələn tələbələrin sayı &lt;strong&gt;k-dan azdırsa&lt;/strong&gt;, dərs ləğv olunur&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- arrivalTime &amp;lt;= 0 → tələbə vaxtında gəlmiş sayılır
+- arrivalTime &amp;gt; 0 → tələbə gecikmiş sayılır
+- Vaxtında gələn tələbələrin sayı k-dan azdırsa, dərs ləğv olunur
+
+🧩 Funksiya
+
 angryProfessor(int k, int[] a)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 Aşağıdakı nəticələrdən birini qaytarmalıdır:
-&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;"YES"&lt;/strong&gt; — dərs ləğv olunacaq&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;"NO"&lt;/strong&gt; — dərs ləğv olunmayacaq&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Funksiya heç bir nəticəni çap ETMƏMƏLİDİR&lt;/li&gt;
-  &lt;li&gt;Yalnız uyğun cavabı &lt;strong&gt;String&lt;/strong&gt; kimi qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+- "YES" — dərs ləğv olunacaq
+- "NO" — dərs ləğv olunmayacaq
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;İlk sətirdə &lt;strong&gt;t&lt;/strong&gt; — test hallarının sayı&lt;/li&gt;
-  &lt;li&gt;Hər test halı üçün:
-    &lt;ul&gt;
-      &lt;li&gt;Bir sətirdə &lt;strong&gt;n&lt;/strong&gt; və &lt;strong&gt;k&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Növbəti sətirdə &lt;strong&gt;n&lt;/strong&gt; ədəd tələbənin gəliş vaxtı&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Funksiya heç bir nəticəni çap ETMƏMƏLİDİR
+- Yalnız uyğun cavabı String kimi qaytarmalıdır
+
+📥 Giriş Formatı
+
+- İlk sətirdə t — test hallarının sayı
+- Hər test halı üçün:
+
+- Bir sətirdə n və k
+- Növbəti sətirdə n ədəd tələbənin gəliş vaxtı
+
+⚙️ Məhdudiyyətlər
+
 1 &amp;lt; t ≤ 10
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-1 ≤ n ≤ 1000
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-1 ≤ k ≤ n
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
--100 ≤ a[i] ≤ 100
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+1 ≤ n ≤ 1000
+
+1 ≤ k ≤ n
+
+-100 ≤ a[i] ≤ 100</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -790,67 +609,42 @@ Aşağıdakı nəticələrdən birini qaytarmalıdır:
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔢 Rəqəmlərlə Bölünmə Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🔢 Rəqəmlərlə Bölünmə Tapşırığı&lt;/h1&gt;
-
-&lt;p&gt;
-Bu tapşırıqda verilmiş bir tam ədədin &lt;strong&gt;hər bir rəqəmi&lt;/strong&gt; yoxlanılır.
-Məqsəd həmin rəqəmin ədədin &lt;strong&gt;böləni olub-olmadığını&lt;/strong&gt; müəyyən etmək və
+Bu tapşırıqda verilmiş bir tam ədədin hər bir rəqəmi yoxlanılır.
+Məqsəd həmin rəqəmin ədədin böləni olub-olmadığını müəyyən etmək və
 bölən olan rəqəmlərin sayını tapmaqdır.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Ədədin hər bir rəqəmi ayrıca yoxlanılmalıdır&lt;/li&gt;
-  &lt;li&gt;Əgər rəqəm &lt;strong&gt;0&lt;/strong&gt;-dırsa, nəzərə alınmır&lt;/li&gt;
-  &lt;li&gt;Əgər &lt;strong&gt;n % digit == 0&lt;/strong&gt; olarsa, həmin rəqəm böləndir&lt;/li&gt;
-  &lt;li&gt;Bölən olan rəqəmlərin sayı hesablanmalıdır&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Ədədin hər bir rəqəmi ayrıca yoxlanılmalıdır
+- Əgər rəqəm 0-dırsa, nəzərə alınmır
+- Əgər n % digit == 0 olarsa, həmin rəqəm böləndir
+- Bölən olan rəqəmlərin sayı hesablanmalıdır
+
+🧩 Funksiya
+
 findDigits(int n)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-Ədədin böləni olan rəqəmlərin sayını göstərən &lt;strong&gt;tam ədəd&lt;/strong&gt; qaytarılmalıdır.
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Funksiya heç bir şey çap ETMƏMƏLİDİR&lt;/li&gt;
-  &lt;li&gt;Yalnız nəticəni &lt;strong&gt;int&lt;/strong&gt; kimi qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+Ədədin böləni olan rəqəmlərin sayını göstərən tam ədəd qaytarılmalıdır.
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;İlk sətirdə &lt;strong&gt;t&lt;/strong&gt; — test hallarının sayı&lt;/li&gt;
-  &lt;li&gt;Növbəti &lt;strong&gt;t&lt;/strong&gt; sətirdə hər biri bir tam ədəd &lt;strong&gt;n&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Funksiya heç bir şey çap ETMƏMƏLİDİR
+- Yalnız nəticəni int kimi qaytarmalıdır
+
+📥 Giriş Formatı
+
+- İlk sətirdə t — test hallarının sayı
+- Növbəti t sətirdə hər biri bir tam ədəd n
+
+⚙️ Məhdudiyyətlər
+
 1 &amp;lt; t &amp;lt; 15
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-0 &amp;lt; n &amp;lt; 100
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+0 &amp;lt; n &amp;lt; 100</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -892,67 +686,42 @@ findDigits(int n)
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🐪 CamelCase Söz Sayma Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🐪 CamelCase Söz Sayma Tapşırığı&lt;/h1&gt;
-
-&lt;p&gt;
-Bu tapşırıqda &lt;strong&gt;CamelCase&lt;/strong&gt; formatında verilmiş bir string mövcuddur.
+Bu tapşırıqda CamelCase formatında verilmiş bir string mövcuddur.
 Məqsəd həmin string daxilində neçə söz olduğunu tapmaqdır.
-&lt;/p&gt;
 
-&lt;p&gt;
 CamelCase formatında:
-&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;İlk sözün bütün hərfləri &lt;strong&gt;kiçik&lt;/strong&gt; olur&lt;/li&gt;
-  &lt;li&gt;Sonrakı sözlərin &lt;strong&gt;ilk hərfi böyük&lt;/strong&gt;, qalanları isə &lt;strong&gt;kiçik&lt;/strong&gt; olur&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Hər böyük hərf yeni sözün başlanğıcıdır&lt;/li&gt;
-  &lt;li&gt;Sözlərin sayı tapılmalıdır&lt;/li&gt;
-  &lt;li&gt;Nəticə tam ədəd kimi qaytarılmalıdır&lt;/li&gt;
-&lt;/ul&gt;
+- İlk sözün bütün hərfləri kiçik olur
+- Sonrakı sözlərin ilk hərfi böyük, qalanları isə kiçik olur
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+📌 Tapşırığın Şərti
+
+- Hər böyük hərf yeni sözün başlanğıcıdır
+- Sözlərin sayı tapılmalıdır
+- Nəticə tam ədəd kimi qaytarılmalıdır
+
+🧩 Funksiya
+
 camelcase(String s)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-String daxilindəki sözlərin sayını göstərən &lt;strong&gt;tam ədəd&lt;/strong&gt; (&lt;strong&gt;int&lt;/strong&gt;).
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Funksiya heç bir nəticəni çap ETMƏMƏLİDİR&lt;/li&gt;
-  &lt;li&gt;Yalnız sözlərin sayını qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+String daxilindəki sözlərin sayını göstərən tam ədəd (int).
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir sətirdə &lt;strong&gt;CamelCase&lt;/strong&gt; formatında string &lt;strong&gt;s&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-1 ≤ length of s ≤ 100,000
-&lt;/code&gt;
-&lt;/p&gt;
+- Funksiya heç bir nəticəni çap ETMƏMƏLİDİR
+- Yalnız sözlərin sayını qaytarmalıdır
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+📥 Giriş Formatı
+
+- Bir sətirdə CamelCase formatında string s
+
+⚙️ Məhdudiyyətlər
+
+1 ≤ length of s ≤ 100,000</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -991,79 +760,49 @@ String daxilindəki sözlərin sayını göstərən &lt;strong&gt;tam ədəd&lt;
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔐 Sezar Şifrəsi (Caesar Cipher)
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🔐 Sezar Şifrəsi (Caesar Cipher)&lt;/h1&gt;
-
-&lt;p&gt;
-Julius Caesar məxfi məlumatlarını qorumaq üçün &lt;strong&gt;Sezar şifrəsindən&lt;/strong&gt; istifadə edib.
+Julius Caesar məxfi məlumatlarını qorumaq üçün Sezar şifrəsindən istifadə edib.
 Bu şifrədə hər bir hərf əlifabədə müəyyən sayda irəli sürüşdürülür.
-&lt;/p&gt;
 
-&lt;p&gt;
 Əgər hərf əlifabənin sonunu keçərsə, yenidən başlanğıcdan davam edir.
-&lt;strong&gt;Hərf olmayan simvollar&lt;/strong&gt; (məsələn, &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;_&lt;/code&gt;, rəqəmlər və s.)
+Hərf olmayan simvollar (məsələn, -, _, rəqəmlər və s.)
 şifrələnmir və olduğu kimi saxlanılır.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Yalnız &lt;strong&gt;əlifba hərfləri&lt;/strong&gt; şifrələnməlidir&lt;/li&gt;
-  &lt;li&gt;Böyük və kiçik hərflər &lt;strong&gt;ayrı-ayrılıqda&lt;/strong&gt; qorunmalıdır&lt;/li&gt;
-  &lt;li&gt;Sürüşdürmə sayı &lt;strong&gt;k&lt;/strong&gt; qədərdir&lt;/li&gt;
-  &lt;li&gt;Əlifbanın sonu keçilərsə, başlanğıca qayıdılır&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Yalnız əlifba hərfləri şifrələnməlidir
+- Böyük və kiçik hərflər ayrı-ayrılıqda qorunmalıdır
+- Sürüşdürmə sayı k qədərdir
+- Əlifbanın sonu keçilərsə, başlanğıca qayıdılır
+
+🧩 Funksiya
+
 caesarCipher(String s, int k)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-Şifrələnmiş mətni qaytarmalıdır (&lt;strong&gt;String&lt;/strong&gt;).
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Funksiya heç bir nəticəni çap ETMƏMƏLİDİR&lt;/li&gt;
-  &lt;li&gt;Yalnız şifrələnmiş mətni qaytarmalıdır&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;k&lt;/strong&gt; dəyəri 26-dan böyük ola bilər (mod 26 tətbiq olunmalıdır)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+Şifrələnmiş mətni qaytarmalıdır (String).
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;İlk sətirdə &lt;strong&gt;n&lt;/strong&gt; — stringin uzunluğu&lt;/li&gt;
-  &lt;li&gt;İkinci sətirdə &lt;strong&gt;s&lt;/strong&gt; — açıq mətn&lt;/li&gt;
-  &lt;li&gt;Üçüncü sətirdə &lt;strong&gt;k&lt;/strong&gt; — sürüşdürmə sayı&lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Funksiya heç bir nəticəni çap ETMƏMƏLİDİR
+- Yalnız şifrələnmiş mətni qaytarmalıdır
+- k dəyəri 26-dan böyük ola bilər (mod 26 tətbiq olunmalıdır)
+
+📥 Giriş Formatı
+
+- İlk sətirdə n — stringin uzunluğu
+- İkinci sətirdə s — açıq mətn
+- Üçüncü sətirdə k — sürüşdürmə sayı
+
+⚙️ Məhdudiyyətlər
+
 1 ≤ n ≤ 100
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-0 ≤ k ≤ 100
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-s ASCII simvollardan ibarətdir (boşluqsuz)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+0 ≤ k ≤ 100
+
+s ASCII simvollardan ibarətdir (boşluqsuz)</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -1107,73 +846,45 @@ s ASCII simvollardan ibarətdir (boşluqsuz)
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔁 Repeated String Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Bu tapşırıqda verilmiş bir string sonsuz şəkildə təkrarlanır.
+Məqsəd həmin təkrarlanan stringin ilk n simvolu daxilində
+'a' hərfinin neçə dəfə təkrarlandığını tapmaqdır.
 
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🔁 Repeated String Tapşırığı&lt;/h1&gt;
+📌 Tapşırığın Şərti
 
-&lt;p&gt;
-Bu tapşırıqda verilmiş bir &lt;strong&gt;string&lt;/strong&gt; sonsuz şəkildə təkrarlanır.
-Məqsəd həmin təkrarlanan stringin ilk &lt;strong&gt;n&lt;/strong&gt; simvolu daxilində
-&lt;strong&gt;'a'&lt;/strong&gt; hərfinin neçə dəfə təkrarlandığını tapmaqdır.
-&lt;/p&gt;
+- Verilmiş s stringi ardıcıl olaraq təkrarlanır
+- Yalnız ilk n simvol nəzərə alınır
+- 'a' hərfinin sayı hesablanmalıdır
+- Effektiv alqoritm istifadə olunmalıdır (n çox böyük ola bilər)
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Verilmiş &lt;strong&gt;s&lt;/strong&gt; stringi ardıcıl olaraq təkrarlanır&lt;/li&gt;
-  &lt;li&gt;Yalnız ilk &lt;strong&gt;n&lt;/strong&gt; simvol nəzərə alınır&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;'a'&lt;/strong&gt; hərfinin sayı hesablanmalıdır&lt;/li&gt;
-  &lt;li&gt;Effektiv alqoritm istifadə olunmalıdır (&lt;strong&gt;n&lt;/strong&gt; çox böyük ola bilər)&lt;/li&gt;
-&lt;/ul&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 repeatedString(String s, long n)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-İlk &lt;strong&gt;n&lt;/strong&gt; simvol daxilindəki &lt;strong&gt;'a'&lt;/strong&gt; hərfinin sayını göstərən
-&lt;strong&gt;long&lt;/strong&gt; tipində nəticə qaytarılmalıdır.
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Funksiya heç bir nəticəni çap ETMƏMƏLİDİR&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;n&lt;/strong&gt; 10&lt;sup&gt;12&lt;/sup&gt;-ə qədər ola bilər&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+İlk n simvol daxilindəki 'a' hərfinin sayını göstərən
+long tipində nəticə qaytarılmalıdır.
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Birinci sətirdə &lt;strong&gt;string s&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;İkinci sətirdə &lt;strong&gt;integer n&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Funksiya heç bir nəticəni çap ETMƏMƏLİDİR
+- n 10^12-ə qədər ola bilər
+
+📥 Giriş Formatı
+
+- Birinci sətirdə string s
+- İkinci sətirdə integer n
+
+⚙️ Məhdudiyyətlər
+
 1 ≤ |s| ≤ 100
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-1 ≤ n ≤ 10&lt;sup&gt;12&lt;/sup&gt;
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-s yalnız kiçik ASCII hərflərdən ibarətdir
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+1 ≤ n ≤ 10^12
+
+s yalnız kiçik ASCII hərflərdən ibarətdir</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -1216,64 +927,39 @@ s yalnız kiçik ASCII hərflərdən ibarətdir
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔤 Pangram Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🔤 Pangram Tapşırığı&lt;/h1&gt;
-
-&lt;p&gt;
-Pangram, İngilis əlifbasındakı &lt;strong&gt;bütün hərfləri&lt;/strong&gt; ehtiva edən bir stringdir.
+Pangram, İngilis əlifbasındakı bütün hərfləri ehtiva edən bir stringdir.
 Verilmiş cümlənin pangram olub-olmadığını müəyyənləşdirin.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Böyük və kiçik hərflər fərqləndirilmir&lt;/li&gt;
-  &lt;li&gt;Əgər cümlə bütün əlifba hərflərini ehtiva edirsə → qaytar "pangram"&lt;/li&gt;
-  &lt;li&gt;Əks halda → qaytar "not pangram"&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Böyük və kiçik hərflər fərqləndirilmir
+- Əgər cümlə bütün əlifba hərflərini ehtiva edirsə → qaytar "pangram"
+- Əks halda → qaytar "not pangram"
+
+🧩 Funksiya
+
 pangrams(String s)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-&lt;strong&gt;String&lt;/strong&gt;: "pangram" və ya "not pangram"
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Funksiya heç bir nəticəni çap ETMƏMƏLİDİR&lt;/li&gt;
-  &lt;li&gt;Yalnız uyğun cavabı qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+String: "pangram" və ya "not pangram"
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir sətirdə yoxlanacaq string &lt;strong&gt;s&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Funksiya heç bir nəticəni çap ETMƏMƏLİDİR
+- Yalnız uyğun cavabı qaytarmalıdır
+
+📥 Giriş Formatı
+
+- Bir sətirdə yoxlanacaq string s
+
+⚙️ Məhdudiyyətlər
+
 0 &amp;lt; |s| ≤ 1000
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-s[i] ∈ {a-z, A-Z, space}
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+s[i] ∈ {a-z, A-Z, space}</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -1316,61 +1002,39 @@ s[i] ∈ {a-z, A-Z, space}
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔢 Fibonacci Rekursiv Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Bu tapşırıqda verilmiş n ədədinə qədər Fibonacci ardıcıllığının 
+n-ci elementini tapmalısınız.
 
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🔢 Fibonacci Rekursiv Tapşırığı&lt;/h1&gt;
+📌 Tapşırığın Şərti
 
-&lt;p&gt;
-Bu tapşırıqda verilmiş &lt;strong&gt;n&lt;/strong&gt; ədədinə qədər Fibonacci ardıcıllığının 
-&lt;strong&gt;n-ci elementini&lt;/strong&gt; tapmalısınız.
-&lt;/p&gt;
+- Fibonacci ardıcıllığı: 0, 1, 1, 2, 3, 5, 8, ...
+- F(n) = F(n-1) + F(n-2)
+- Əgər n = 0 → F(0) = 0
+- Əgər n = 1 → F(1) = 1
+- Funksiya rekursiv şəkildə n-ci Fibonacci ədədini qaytarmalıdır
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Fibonacci ardıcıllığı: 0, 1, 1, 2, 3, 5, 8, ...&lt;/li&gt;
-  &lt;li&gt;F(n) = F(n-1) + F(n-2)&lt;/li&gt;
-  &lt;li&gt;Əgər n = 0 → F(0) = 0&lt;/li&gt;
-  &lt;li&gt;Əgər n = 1 → F(1) = 1&lt;/li&gt;
-  &lt;li&gt;Funksiya rekursiv şəkildə n-ci Fibonacci ədədini qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 fibonacci(int n)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-&lt;strong&gt;int&lt;/strong&gt;: n-ci Fibonacci ədədi
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Funksiya heç bir nəticəni çap ETMƏMƏLİDİR&lt;/li&gt;
-  &lt;li&gt;Yalnız n-ci Fibonacci ədədi qaytarılmalıdır&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+int: n-ci Fibonacci ədədi
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir sətirdə &lt;strong&gt;tam ədəd n&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-0 ≤ n ≤ 30
-&lt;/code&gt;
-&lt;/p&gt;
+- Funksiya heç bir nəticəni çap ETMƏMƏLİDİR
+- Yalnız n-ci Fibonacci ədədi qaytarılmalıdır
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+📥 Giriş Formatı
+
+- Bir sətirdə tam ədəd n
+
+⚙️ Məhdudiyyətlər
+
+0 ≤ n ≤ 30</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -1405,71 +1069,44 @@ fibonacci(int n)
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔢 Təkrarlanan Ədədləri Tapma Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🔢 Təkrarlanan Ədədləri Tapma Tapşırığı&lt;/h1&gt;
-
-&lt;p&gt;
-Bu tapşırıqda verilmiş tam ədəd massivində &lt;strong&gt;təkrarlanan ədədləri&lt;/strong&gt; tapmalısınız.
+Bu tapşırıqda verilmiş tam ədəd massivində təkrarlanan ədədləri tapmalısınız.
 Əgər bir ədəd ən azı iki dəfə görünürsə, onu nəticəyə əlavə edin.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Təkrarlanan ədədlər &lt;strong&gt;artma sıra ilə&lt;/strong&gt; qaytarılmalıdır&lt;/li&gt;
-  &lt;li&gt;Əgər heç bir ədəd təkrarlanmırsa → boş massiv qaytarılmalıdır&lt;/li&gt;
-  &lt;li&gt;Funksiya nəticəni &lt;strong&gt;int[]&lt;/strong&gt; tipində qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Təkrarlanan ədədlər artma sıra ilə qaytarılmalıdır
+- Əgər heç bir ədəd təkrarlanmırsa → boş massiv qaytarılmalıdır
+- Funksiya nəticəni int[] tipində qaytarmalıdır
+
+🧩 Funksiya
+
 findDuplicates(int[] arr)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-Artan sıra ilə təkrarlanan ədədlərin massivini (&lt;strong&gt;int[]&lt;/strong&gt;) qaytarır
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Funksiya heç bir nəticəni çap ETMƏMƏLİDİR&lt;/li&gt;
-  &lt;li&gt;Yalnız təkrarlanan ədədləri qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+Artan sıra ilə təkrarlanan ədədlərin massivini (int[]) qaytarır
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;İlk sətirdə &lt;strong&gt;n&lt;/strong&gt; — massivdəki elementlərin sayı&lt;/li&gt;
-  &lt;li&gt;İkinci sətirdə &lt;strong&gt;n&lt;/strong&gt; tam ədəd — massiv elementləri&lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Funksiya heç bir nəticəni çap ETMƏMƏLİDİR
+- Yalnız təkrarlanan ədədləri qaytarmalıdır
+
+📥 Giriş Formatı
+
+- İlk sətirdə n — massivdəki elementlərin sayı
+- İkinci sətirdə n tam ədəd — massiv elementləri
+
+⚙️ Məhdudiyyətlər
+
 1 ≤ n ≤ 100,000
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+
 -10⁹ ≤ arr[i] ≤ 10⁹
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Nümunə İzahı&lt;/h3&gt;
-&lt;p&gt;
-Massiv: [1, 3, 2, 3, 4, 1] &lt;br&gt;
-Təkrarlanan ədədlər: 1 və 3 → nəticə: [1, 3]
-&lt;/p&gt;
+📌 Nümunə İzahı
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+Massiv: [1, 3, 2, 3, 4, 1] Təkrarlanan ədədlər: 1 və 3 → nəticə: [1, 3]</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -1521,71 +1158,44 @@ Təkrarlanan ədədlər: 1 və 3 → nəticə: [1, 3]
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">❓ Çatışmayan Ədədi Tapma Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;❓ Çatışmayan Ədədi Tapma Tapşırığı&lt;/h1&gt;
-
-&lt;p&gt;
-Bu tapşırıqda verilmiş massiv &lt;strong&gt;1-dən n-ə qədər&lt;/strong&gt; bütün ədədləri əhatə etməlidir,
+Bu tapşırıqda verilmiş massiv 1-dən n-ə qədər bütün ədədləri əhatə etməlidir,
 amma onlardan biri çatışmır. Məqsəd həmin çatışmayan ədədi tapmaqdır.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Massivdəki bütün ədədlər fərqlidir&lt;/li&gt;
-  &lt;li&gt;Massiv yalnız bir ədəd çatışır&lt;/li&gt;
-  &lt;li&gt;Funksiya çatışmayan ədədi qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Massivdəki bütün ədədlər fərqlidir
+- Massiv yalnız bir ədəd çatışır
+- Funksiya çatışmayan ədədi qaytarmalıdır
+
+🧩 Funksiya
+
 findMissingNumber(int[] arr)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-&lt;strong&gt;int&lt;/strong&gt;: çatışmayan ədəd
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Funksiya heç bir nəticəni çap ETMƏMƏLİDİR&lt;/li&gt;
-  &lt;li&gt;Yalnız çatışmayan ədədi qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+int: çatışmayan ədəd
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;İlk sətirdə &lt;strong&gt;n&lt;/strong&gt; — massivdəki ədədlərin nəzərdə tutulmuş sayı&lt;/li&gt;
-  &lt;li&gt;İkinci sətirdə &lt;strong&gt;n-1&lt;/strong&gt; tam ədəd — massiv elementləri&lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Funksiya heç bir nəticəni çap ETMƏMƏLİDİR
+- Yalnız çatışmayan ədədi qaytarmalıdır
+
+📥 Giriş Formatı
+
+- İlk sətirdə n — massivdəki ədədlərin nəzərdə tutulmuş sayı
+- İkinci sətirdə n-1 tam ədəd — massiv elementləri
+
+⚙️ Məhdudiyyətlər
+
 2 ≤ n ≤ 100,000
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+
 1 ≤ arr[i] ≤ n
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Nümunə İzahı&lt;/h3&gt;
-&lt;p&gt;
-Massiv: [1, 2, 4, 5] &lt;br&gt;
-1-dən 5-ə qədər yalnız 3 çatışır → nəticə: 3
-&lt;/p&gt;
+📌 Nümunə İzahı
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+Massiv: [1, 2, 4, 5] 1-dən 5-ə qədər yalnız 3 çatışır → nəticə: 3</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -1625,71 +1235,43 @@ Massiv: [1, 2, 4, 5] &lt;br&gt;
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🌳 Binary Tree Hündürlüyü Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🌳 Binary Tree Hündürlüyü Tapşırığı&lt;/h1&gt;
-
-&lt;p&gt;
-Verilmiş Binary Tree üçün ağacın &lt;strong&gt;hündürlüyünü&lt;/strong&gt; tapın.
+Verilmiş Binary Tree üçün ağacın hündürlüyünü tapın.
 Ağacın hündürlüyü kökdən ən uzaq yarpaq node-a qədər olan ən uzun yolun kənar (edge) sayıdır.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Boş ağacın hündürlüyü -1-dir&lt;/li&gt;
-  &lt;li&gt;Yalnız bir kök node olan ağacın hündürlüyü 0-dır&lt;/li&gt;
-  &lt;li&gt;Funksiya rekursiv və ya DFS vasitəsilə hündürlüyü hesablamalıdır&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Boş ağacın hündürlüyü -1-dir
+- Yalnız bir kök node olan ağacın hündürlüyü 0-dır
+- Funksiya rekursiv və ya DFS vasitəsilə hündürlüyü hesablamalıdır
+
+🧩 Funksiya
+
 treeHeight(Node root)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-&lt;strong&gt;int&lt;/strong&gt;: ağacın hündürlüyü
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Funksiya heç bir nəticəni çap ETMƏMƏLİDİR&lt;/li&gt;
-  &lt;li&gt;Yalnız hündürlüyü qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+int: ağacın hündürlüyü
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;İlk sətirdə integer &lt;strong&gt;n&lt;/strong&gt; — node-ların sayı&lt;/li&gt;
-  &lt;li&gt;Sonrakı n sətirdə hər node üçün: &lt;strong&gt;value left right&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;left və right — müvafiq uşağın indeksi və ya -1 (əgər yoxdur)&lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Funksiya heç bir nəticəni çap ETMƏMƏLİDİR
+- Yalnız hündürlüyü qaytarmalıdır
+
+📥 Giriş Formatı
+
+- İlk sətirdə integer n — node-ların sayı
+- Sonrakı n sətirdə hər node üçün: value left right
+- left və right — müvafiq uşağın indeksi və ya -1 (əgər yoxdur)
+
+⚙️ Məhdudiyyətlər
+
 1 ≤ n ≤ 100,000
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-Node-lar 1-dən n-ə qədər nömrələnir
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-Ağacda dövr yoxdur
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+Node-lar 1-dən n-ə qədər nömrələnir
+
+Ağacda dövr yoxdur</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -1749,70 +1331,42 @@ Ağacda dövr yoxdur
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🏠 Minimum Zərər Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🏠 Minimum Zərər Tapşırığı&lt;/h1&gt;
-
-&lt;p&gt;
-Lauren ev alıb sonra satdıqda yaranacaq &lt;strong&gt;minimum zərəri&lt;/strong&gt; tapmaq istəyir.
+Lauren ev alıb sonra satdıqda yaranacaq minimum zərəri tapmaq istəyir.
 Qiymətlər siyahısı verilir və ev bir il alınmalı, başqa bir il satılmalıdır. Məqsəd maliyyə itkilərini minimuma endirməkdir.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Evin alınma ili, satılma ilindən əvvəl olmalıdır&lt;/li&gt;
-  &lt;li&gt;Alış-satış əməliyyatı zərərlə baş verməlidir&lt;/li&gt;
-  &lt;li&gt;Funksiya minimum zərəri qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Evin alınma ili, satılma ilindən əvvəl olmalıdır
+- Alış-satış əməliyyatı zərərlə baş verməlidir
+- Funksiya minimum zərəri qaytarmalıdır
+
+🧩 Funksiya
+
 minimumLoss(long[] price)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-&lt;strong&gt;long&lt;/strong&gt;: minimum zərər
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Funksiya heç bir nəticəni çap ETMƏMƏLİDİR&lt;/li&gt;
-  &lt;li&gt;Yalnız minimum zərəri qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+long: minimum zərər
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Birinci sətirdə &lt;strong&gt;n&lt;/strong&gt; – illərin sayı&lt;/li&gt;
-  &lt;li&gt;İkinci sətirdə &lt;strong&gt;n&lt;/strong&gt; ədəd long integer – price[i] hər ilin ev qiyməti&lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Funksiya heç bir nəticəni çap ETMƏMƏLİDİR
+- Yalnız minimum zərəri qaytarmalıdır
+
+📥 Giriş Formatı
+
+- Birinci sətirdə n – illərin sayı
+- İkinci sətirdə n ədəd long integer – price[i] hər ilin ev qiyməti
+
+⚙️ Məhdudiyyətlər
+
 2 ≤ n ≤ 200,000
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-1 ≤ price[i] &amp;lt; 10¹⁶
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-Bütün qiymətlər fərqlidir və həmişə etibarlı cavab mövcuddur
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+1 ≤ price[i] &amp;lt; 10¹⁶
+
+Bütün qiymətlər fərqlidir və həmişə etibarlı cavab mövcuddur</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -1856,62 +1410,37 @@ Bütün qiymətlər fərqlidir və həmişə etibarlı cavab mövcuddur
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔤 Təkrarlanmayan Ən Uzun Alt-Sətir Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Verilmiş string daxilində ən uzun alt-sətiri tapın ki, orada heç bir simvol iki dəfə təkrarlanmasın.
 
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🔤 Təkrarlanmayan Ən Uzun Alt-Sətir Tapşırığı&lt;/h1&gt;
+📌 Tapşırığın Şərti
 
-&lt;p&gt;
-Verilmiş string daxilində ən uzun alt-sətiri tapın ki, orada &lt;strong&gt;heç bir simvol iki dəfə təkrarlanmasın&lt;/strong&gt;.
-&lt;/p&gt;
+- Alt-sətirdə eyni simvol təkrarlanmamalıdır
+- Funksiya həmin alt-sətrin uzunluğunu qaytarmalıdır
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Alt-sətirdə eyni simvol təkrarlanmamalıdır&lt;/li&gt;
-  &lt;li&gt;Funksiya həmin alt-sətrin uzunluğunu qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 longestUniqueSubstring(String s)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-&lt;strong&gt;int&lt;/strong&gt;: ən uzun təkrarlanmayan alt-sətrin uzunluğu
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Funksiya heç bir nəticəni çap ETMƏMƏLİDİR&lt;/li&gt;
-  &lt;li&gt;Yalnız alt-sətrin uzunluğunu qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+int: ən uzun təkrarlanmayan alt-sətrin uzunluğu
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir sətirdə string &lt;strong&gt;s&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Funksiya heç bir nəticəni çap ETMƏMƏLİDİR
+- Yalnız alt-sətrin uzunluğunu qaytarmalıdır
+
+📥 Giriş Formatı
+
+- Bir sətirdə string s
+
+⚙️ Məhdudiyyətlər
+
 1 ≤ |s| ≤ 100,000
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-s yalnız ASCII simvollardan ibarətdir
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+s yalnız ASCII simvollardan ibarətdir</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -1954,60 +1483,39 @@ s yalnız ASCII simvollardan ibarətdir
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">📚 İki Stack ilə Queue Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;📚 İki Stack ilə Queue Tapşırığı&lt;/h1&gt;
-
-&lt;p&gt;
 İki stack istifadə edərək queue əməliyyatlarını həyata keçirin. Queue əməliyyatları:
-&lt;code&gt;enqueue(x)&lt;/code&gt; – element əlavə et, &lt;code&gt;dequeue()&lt;/code&gt; – öncə gələn elementi çıxar, &lt;code&gt;front()&lt;/code&gt; – öncə gələn elementi göstər.
-&lt;/p&gt;
+enqueue(x) – element əlavə et, dequeue() – öncə gələn elementi çıxar, front() – öncə gələn elementi göstər.
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;İki stack istifadə edilməlidir&lt;/li&gt;
-  &lt;li&gt;Queue FIFO (first in, first out) qaydasına əməl etməlidir&lt;/li&gt;
-  &lt;li&gt;Funksiya və ya struktur "enqueue", "dequeue", "front" əməliyyatlarını təmin etməlidir&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksionallıq / Əməliyyatlar&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;1 x&lt;/code&gt; – element x-i queue-ya əlavə et&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;2&lt;/code&gt; – queue-dan element çıxart&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;3&lt;/code&gt; – queue-nun önündəki elementi çap et&lt;/li&gt;
-&lt;/ul&gt;
+- İki stack istifadə edilməlidir
+- Queue FIFO (first in, first out) qaydasına əməl etməlidir
+- Funksiya və ya struktur "enqueue", "dequeue", "front" əməliyyatlarını təmin etməlidir
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;İlk sətirdə integer &lt;strong&gt;n&lt;/strong&gt; – əməliyyatların sayı&lt;/li&gt;
-  &lt;li&gt;Növbəti n sətirdə əməliyyatlar: "1 x", "2", "3"&lt;/li&gt;
-&lt;/ul&gt;
+🧩 Funksionallıq / Əməliyyatlar
 
-&lt;h3 style="color:#2563eb;"&gt;📤 Çıxış Formatı&lt;/h3&gt;
-&lt;p&gt;
-Hər &lt;code&gt;3&lt;/code&gt; əməliyyatı üçün queue-nun önündəki elementi bir sətirdə çap edin.
-&lt;/p&gt;
+- 1 x – element x-i queue-ya əlavə et
+- 2 – queue-dan element çıxart
+- 3 – queue-nun önündəki elementi çap et
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+📥 Giriş Formatı
+
+- İlk sətirdə integer n – əməliyyatların sayı
+- Növbəti n sətirdə əməliyyatlar: "1 x", "2", "3"
+
+📤 Çıxış Formatı
+
+Hər 3 əməliyyatı üçün queue-nun önündəki elementi bir sətirdə çap edin.
+
+⚙️ Məhdudiyyətlər
+
 1 ≤ n ≤ 100,000
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-1 ≤ x ≤ 10⁹
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-Əməliyyatlar yalnız "1 x", "2", "3" formasında verilmişdir
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+1 ≤ x ≤ 10⁹
+
+Əməliyyatlar yalnız "1 x", "2", "3" formasında verilmişdir</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -2062,66 +1570,40 @@ Hər &lt;code&gt;3&lt;/code&gt; əməliyyatı üçün queue-nun önündəki elem
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">📊 Massiv Elementlərinin Tezlikləri Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Verilmiş massivdəki hər bir elementin neçə dəfə təkrarladığını tapın və nəticəni map (hashmap) şəklində qaytarın.
 
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;📊 Massiv Elementlərinin Tezlikləri Tapşırığı&lt;/h1&gt;
+📌 Tapşırığın Şərti
 
-&lt;p&gt;
-Verilmiş massivdəki hər bir elementin neçə dəfə təkrarladığını tapın və nəticəni &lt;strong&gt;map (hashmap)&lt;/strong&gt; şəklində qaytarın.
-&lt;/p&gt;
+- Massivdəki bütün unikal elementlərin tezliklərini hesablayın
+- Nəticə map/HashMap şəklində olmalıdır: element → tezlik
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Massivdəki bütün unikal elementlərin tezliklərini hesablayın&lt;/li&gt;
-  &lt;li&gt;Nəticə map/HashMap şəklində olmalıdır: &lt;code&gt;element → tezlik&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 elementFrequency(int[] arr)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-&lt;strong&gt;Map&amp;lt;Integer, Integer&amp;gt;&lt;/strong&gt;: hər elementin neçə dəfə təkrarlandığını göstərən cütlüklər
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Funksiya heç bir nəticəni çap ETMƏMƏLİDİR&lt;/li&gt;
-  &lt;li&gt;Yalnız tezlik map-i qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+Map&amp;lt;Integer, Integer&amp;gt;: hər elementin neçə dəfə təkrarlandığını göstərən cütlüklər
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Birinci sətirdə integer &lt;strong&gt;n&lt;/strong&gt; – massivdəki elementlərin sayı&lt;/li&gt;
-  &lt;li&gt;İkinci sətirdə n ədəd integer – massiv elementləri &lt;strong&gt;arr[i]&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Funksiya heç bir nəticəni çap ETMƏMƏLİDİR
+- Yalnız tezlik map-i qaytarmalıdır
+
+📥 Giriş Formatı
+
+- Birinci sətirdə integer n – massivdəki elementlərin sayı
+- İkinci sətirdə n ədəd integer – massiv elementləri arr[i]
+
+⚙️ Məhdudiyyətlər
+
 1 ≤ n ≤ 100,000
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-0 ≤ arr[i] ≤ 10⁹
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-Massiv elementləri istənilən integer ola bilər
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+0 ≤ arr[i] ≤ 10⁹
+
+Massiv elementləri istənilən integer ola bilər</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -2158,56 +1640,34 @@ Massiv elementləri istənilən integer ola bilər
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔽 Selection Sort ilə Azalan Sıra Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Verilmiş integer massivini Selection Sort alqoritmi istifadə edərək azalan sıra ilə sıralayın.
 
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🔽 Selection Sort ilə Azalan Sıra Tapşırığı&lt;/h1&gt;
+📌 Tapşırığın Şərti
 
-&lt;p&gt;
-Verilmiş integer massivini &lt;strong&gt;Selection Sort&lt;/strong&gt; alqoritmi istifadə edərək azalan sıra ilə sıralayın.
-&lt;/p&gt;
+- Massivin elementlərini azalan sıra ilə sıralayın
+- Selection Sort alqoritmi istifadə olunmalıdır
+- Funksiya sıralanmış massiv elementlərini qaytarmalıdır
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Massivin elementlərini azalan sıra ilə sıralayın&lt;/li&gt;
-  &lt;li&gt;Selection Sort alqoritmi istifadə olunmalıdır&lt;/li&gt;
-  &lt;li&gt;Funksiya sıralanmış massiv elementlərini qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 selectionSortDescending(int[] arr)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-Azalan sıra ilə sıralanmış massiv elementləri, &lt;strong&gt;boşluqla ayrılmış şəkildə&lt;/strong&gt;
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Birinci sətirdə integer &lt;strong&gt;n&lt;/strong&gt; – massivdəki elementlərin sayı&lt;/li&gt;
-  &lt;li&gt;İkinci sətirdə n ədəd integer – massiv elementləri &lt;strong&gt;arr[i]&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+Azalan sıra ilə sıralanmış massiv elementləri, boşluqla ayrılmış şəkildə
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+📥 Giriş Formatı
+
+- Birinci sətirdə integer n – massivdəki elementlərin sayı
+- İkinci sətirdə n ədəd integer – massiv elementləri arr[i]
+
+⚙️ Məhdudiyyətlər
+
 1 ≤ n ≤ 100,000
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
--10⁹ ≤ arr[i] ≤ 10⁹
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+-10⁹ ≤ arr[i] ≤ 10⁹</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -2252,72 +1712,43 @@ Azalan sıra ilə sıralanmış massiv elementləri, &lt;strong&gt;boşluqla ayr
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">💰 Minimum Sikkə Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;💰 Minimum Sikkə Tapşırığı&lt;/h1&gt;
-
-&lt;p&gt;
 Verilmiş məbləği ödəniş üçün minimum sayda sikkə ilə ödəyin. Sikkələrdən istifadə edərək məbləği tam ödəyin və sikkələrin sayını minimuma endirin.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Verilmiş sikkə növlərindən istifadə edərək məbləği tam ödəyin&lt;/li&gt;
-  &lt;li&gt;İstifadə olunan sikkələrin sayı minimum olmalıdır&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Verilmiş sikkə növlərindən istifadə edərək məbləği tam ödəyin
+- İstifadə olunan sikkələrin sayı minimum olmalıdır
+
+🧩 Funksiya
+
 minimumCoins(int[] coins, int amount)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-&lt;strong&gt;int&lt;/strong&gt;: minimum sikkə sayı
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;div style="background:#f8fafc;border-left:5px solid #2563eb;padding:12px;border-radius:6px;"&gt;
-&lt;strong&gt;Qeyd:&lt;/strong&gt;
-&lt;ul&gt;
-  &lt;li&gt;Funksiya heç bir nəticəni çap ETMƏMƏLİDİR&lt;/li&gt;
-  &lt;li&gt;Yalnız minimum sikkə sayını qaytarmalıdır&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+int: minimum sikkə sayı
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Birinci sətirdə integer &lt;strong&gt;n&lt;/strong&gt; – sikkə növlərinin sayı&lt;/li&gt;
-  &lt;li&gt;İkinci sətirdə n ədəd integer – sikkə dəyərləri&lt;/li&gt;
-  &lt;li&gt;Üçüncü sətirdə integer &lt;strong&gt;amount&lt;/strong&gt; – ödəniləcək məbləğ&lt;/li&gt;
-&lt;/ul&gt;
+Qeyd:
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Funksiya heç bir nəticəni çap ETMƏMƏLİDİR
+- Yalnız minimum sikkə sayını qaytarmalıdır
+
+📥 Giriş Formatı
+
+- Birinci sətirdə integer n – sikkə növlərinin sayı
+- İkinci sətirdə n ədəd integer – sikkə dəyərləri
+- Üçüncü sətirdə integer amount – ödəniləcək məbləğ
+
+⚙️ Məhdudiyyətlər
+
 1 ≤ n ≤ 100
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-1 ≤ sikkə dəyərləri ≤ 10⁴
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-1 ≤ amount ≤ 10⁶
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-Hər məbləği tam ödəmək mümkündür
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+1 ≤ sikkə dəyərləri ≤ 10⁴
+
+1 ≤ amount ≤ 10⁶
+
+Hər məbləği tam ödəmək mümkündür</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -2358,49 +1789,30 @@ Hər məbləği tam ödəmək mümkündür
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔗 Mötərizələrin Düzgünlüyü Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🔗 Mötərizələrin Düzgünlüyü Tapşırığı&lt;/h1&gt;
-
-&lt;p&gt;
 Verilmiş stringdə mötərizələrin düzgün açılıb-bağlandığını yoxlayın. Düzgün qatlanan mötərizə stringi, hər açılan mötərizə üçün uyğun bağlanan mötərizənin mövcud olduğu stringdir.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Stringdəki mötərizələrin düzgünlüyünü təyin edin&lt;/li&gt;
-  &lt;li&gt;Düzgün mötərizə stringi: hər açılan mötərizə üçün uyğun bağlanan mötərizə mövcuddur və düzgün ardıcıllıqda yerləşir&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Stringdəki mötərizələrin düzgünlüyünü təyin edin
+- Düzgün mötərizə stringi: hər açılan mötərizə üçün uyğun bağlanan mötərizə mövcuddur və düzgün ardıcıllıqda yerləşir
+
+🧩 Funksiya
+
 isBalanced(String s)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-Boolean: mötərizələr düzgün qatlanıbsa &lt;strong&gt;true&lt;/strong&gt;, əks halda &lt;strong&gt;false&lt;/strong&gt;
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir sətirdə string &lt;strong&gt;s&lt;/strong&gt; – yalnız &lt;code&gt;(, ), {, }, [ və ]&lt;/code&gt; simvollarından ibarət&lt;/li&gt;
-&lt;/ul&gt;
+Boolean: mötərizələr düzgün qatlanıbsa true, əks halda false
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-1 ≤ |s| ≤ 10⁵
-&lt;/code&gt;
-&lt;/p&gt;
+📥 Giriş Formatı
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+- Bir sətirdə string s – yalnız (, ), {, }, [ və ] simvollarından ibarət
+
+⚙️ Məhdudiyyətlər
+
+1 ≤ |s| ≤ 10⁵</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -2442,56 +1854,34 @@ Boolean: mötərizələr düzgün qatlanıbsa &lt;strong&gt;true&lt;/strong&gt;,
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🌀 Optimized Bubble Sort Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Massivi Bubble Sort alqoritmi istifadə edərək sıralayın, lakin əlavə optimizasiya ilə: əgər bir iterasiya boyunca heç dəyişiklik olmursa, artıq massiv sıralanmış sayılır və növbəti iterasiyalara ehtiyac qalmır.
 
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🌀 Optimized Bubble Sort Tapşırığı&lt;/h1&gt;
+📌 Tapşırığın Şərti
 
-&lt;p&gt;
-Massivi &lt;strong&gt;Bubble Sort&lt;/strong&gt; alqoritmi istifadə edərək sıralayın, lakin əlavə optimizasiya ilə: əgər bir iterasiya boyunca heç dəyişiklik olmursa, artıq massiv sıralanmış sayılır və növbəti iterasiyalara ehtiyac qalmır.
-&lt;/p&gt;
+- Massivin elementlərini Bubble Sort ilə sıralayın
+- Əlavə optimizasiya: əgər bir iterasiya ərzində heç bir dəyişiklik olmursa, proses dayandırılmalıdır
+- Massiv azalan və ya artma istiqamətində sıralana bilər (istəyə görə)
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Massivin elementlərini Bubble Sort ilə sıralayın&lt;/li&gt;
-  &lt;li&gt;Əlavə optimizasiya: əgər bir iterasiya ərzində heç bir dəyişiklik olmursa, proses dayandırılmalıdır&lt;/li&gt;
-  &lt;li&gt;Massiv azalan və ya artma istiqamətində sıralana bilər (istəyə görə)&lt;/li&gt;
-&lt;/ul&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 optimizedBubbleSort(int[] arr, boolean ascending)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-Sıralanmış massiv elementləri, &lt;strong&gt;boşluqla ayrılmış&lt;/strong&gt;
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Birinci sətirdə integer &lt;strong&gt;n&lt;/strong&gt; – massiv ölçüsü&lt;/li&gt;
-  &lt;li&gt;İkinci sətirdə n ədəd integer – massiv elementləri &lt;strong&gt;arr[i]&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+Sıralanmış massiv elementləri, boşluqla ayrılmış
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+📥 Giriş Formatı
+
+- Birinci sətirdə integer n – massiv ölçüsü
+- İkinci sətirdə n ədəd integer – massiv elementləri arr[i]
+
+⚙️ Məhdudiyyətlər
+
 1 ≤ n ≤ 100,000
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
--10⁹ ≤ arr[i] ≤ 10⁹
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+-10⁹ ≤ arr[i] ≤ 10⁹</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -2536,57 +1926,36 @@ Sıralanmış massiv elementləri, &lt;strong&gt;boşluqla ayrılmış&lt;/stron
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔍 Binary Search Tapşırığı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Verilmiş artma sırasına düzülmüş massivdə müəyyən bir elementin birinci və sonuncu indeksini tapın. Əgər element massivdə yoxdursa, -1 -1 qaytarın.
 
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🔍 Binary Search Tapşırığı&lt;/h1&gt;
+📌 Tapşırığın Şərti
 
-&lt;p&gt;
-Verilmiş artma sırasına düzülmüş massivdə müəyyən bir elementin birinci və sonuncu indeksini tapın. Əgər element massivdə yoxdursa, &lt;strong&gt;-1 -1&lt;/strong&gt; qaytarın.
-&lt;/p&gt;
+- Binary Search istifadə edərək elementin birinci və sonuncu görünüşünü tapın
+- Əgər element massivdə yoxdursa, -1 -1 qaytarın
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Binary Search istifadə edərək elementin birinci və sonuncu görünüşünü tapın&lt;/li&gt;
-  &lt;li&gt;Əgər element massivdə yoxdursa, -1 -1 qaytarın&lt;/li&gt;
-&lt;/ul&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 findFirstAndLastPosition(int[] arr, int x)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-İki integer: elementin birinci və sonuncu indeksi, boşluqla ayrılmış. Tapılmazsa &lt;strong&gt;-1 -1&lt;/strong&gt;.
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Birinci sətirdə integer &lt;strong&gt;n&lt;/strong&gt; – massiv ölçüsü&lt;/li&gt;
-  &lt;li&gt;İkinci sətirdə n ədəd integer – artma sırası ilə verilmiş massiv elementləri &lt;strong&gt;arr[i]&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Üçüncü sətirdə integer &lt;strong&gt;x&lt;/strong&gt; – axtarılan element&lt;/li&gt;
-&lt;/ul&gt;
+İki integer: elementin birinci və sonuncu indeksi, boşluqla ayrılmış. Tapılmazsa -1 -1.
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+📥 Giriş Formatı
+
+- Birinci sətirdə integer n – massiv ölçüsü
+- İkinci sətirdə n ədəd integer – artma sırası ilə verilmiş massiv elementləri arr[i]
+- Üçüncü sətirdə integer x – axtarılan element
+
+⚙️ Məhdudiyyətlər
+
 1 ≤ n ≤ 100,000
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
--10⁹ ≤ arr[i], x ≤ 10⁹
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;Massiv artma sırası ilə verilmişdir&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+-10⁹ ≤ arr[i], x ≤ 10⁹
+
+Massiv artma sırası ilə verilmişdir</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -2640,44 +2009,30 @@ findFirstAndLastPosition(int[] arr, int x)
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔗 DFS ilə Bağlı Komponentləri Tapmaq
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🔗 DFS ilə Bağlı Komponentləri Tapmaq&lt;/h1&gt;
-
-&lt;p&gt;
 Verilmiş istiqamətlənməyən qrafda DFS (Depth-First Search) alqoritmi istifadə edərək bütün bağlı komponentləri tapın və onların sayını çıxarın.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;DFS istifadə edərək qrafdakı bütün bağlı komponentləri tapın&lt;/li&gt;
-  &lt;li&gt;Hər bir bağlı komponent bir-birinə çatabilən vertexlərdən ibarət olacaq&lt;/li&gt;
-  &lt;li&gt;Çıxışda yalnız bağlı komponentlərin sayı tələb olunur&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- DFS istifadə edərək qrafdakı bütün bağlı komponentləri tapın
+- Hər bir bağlı komponent bir-birinə çatabilən vertexlərdən ibarət olacaq
+- Çıxışda yalnız bağlı komponentlərin sayı tələb olunur
+
+🧩 Funksiya
+
 countConnectedComponents(int n, int[][] edges)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 Integer – qrafdakı bağlı komponentlərin sayı
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Birinci sətirdə iki integer &lt;strong&gt;n&lt;/strong&gt; və &lt;strong&gt;m&lt;/strong&gt; – vertex və kənar sayı&lt;/li&gt;
-  &lt;li&gt;Sonrakı m sətirdə hər bir kənarın iki vertexini təmsil edən iki integer&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;</p>
+- Birinci sətirdə iki integer n və m – vertex və kənar sayı
+- Sonrakı m sətirdə hər bir kənarın iki vertexini təmsil edən iki integer
+
+⚙️ Məhdudiyyətlər</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -2732,60 +2087,35 @@ Integer – qrafdakı bağlı komponentlərin sayı
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">📊 Artma Sıralı Matrisdə K‑ci Kiçik Element
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Verilmiş n × n ölçülü artma sıralı matrisdə (hər sətir və sütun artan) k‑cı kiçik elementi tapın.
 
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;📊 Artma Sıralı Matrisdə K‑ci Kiçik Element&lt;/h1&gt;
+📌 Tapşırığın Şərti
 
-&lt;p&gt;
-Verilmiş &lt;strong&gt;n × n&lt;/strong&gt; ölçülü artma sıralı matrisdə (hər sətir və sütun artan) k‑cı kiçik elementi tapın.
-&lt;/p&gt;
+- Matrisin hər sətiri və sütunu artan sıra ilə verilmişdir
+- Axtarış: k‑cı kiçik element
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Matrisin hər sətiri və sütunu artan sıra ilə verilmişdir&lt;/li&gt;
-  &lt;li&gt;Axtarış: k‑cı kiçik element&lt;/li&gt;
-&lt;/ul&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 kthSmallestElement(int[][] matrix, int k)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 Integer – matrisdəki k‑cı kiçik element
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Birinci sətirdə iki integer &lt;strong&gt;n&lt;/strong&gt; və &lt;strong&gt;k&lt;/strong&gt; – matris ölçüsü və axtarılan elementin sırası&lt;/li&gt;
-  &lt;li&gt;Sonrakı n sətirdə hər sətirində n integer – matris elementləri&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Birinci sətirdə iki integer n və k – matris ölçüsü və axtarılan elementin sırası
+- Sonrakı n sətirdə hər sətirində n integer – matris elementləri
+
+⚙️ Məhdudiyyətlər
+
 1 ≤ n ≤ 500
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-1 ≤ k ≤ n*n
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
--10⁹ ≤ matrix[i][j] ≤ 10⁹
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+1 ≤ k ≤ n*n
+
+-10⁹ ≤ matrix[i][j] ≤ 10⁹</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -2827,63 +2157,38 @@ Integer – matrisdəki k‑cı kiçik element
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🖨️ Prioritetli Printer Növbəsi
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🖨️ Prioritetli Printer Növbəsi&lt;/h1&gt;
-
-&lt;p&gt;
 Ofis printerində sənədlər növbəyə (queue) əlavə olunur. Hər sənədin öz prioriteti var. Printer yüksək prioritetli sənədləri birinci çap edir.
 Verilmiş sənədlərin prioritlərinə və istifadəçinin sənədinin növbədəki indeksinə əsasən, həmin sənədin neçəci çap olunacağını tapın.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Queue-da sənədlər əlavə olunur və yüksək prioritetli sənəd ilk çap olunur&lt;/li&gt;
-  &lt;li&gt;Əgər növbədə daha yüksək prioritetli sənəd varsa, öncə həmin sənəd çap olunur&lt;/li&gt;
-  &lt;li&gt;Verilmiş &lt;strong&gt;m&lt;/strong&gt; indeksli sənədin neçəci çapda olduğunu müəyyənləşdirin&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Queue-da sənədlər əlavə olunur və yüksək prioritetli sənəd ilk çap olunur
+- Əgər növbədə daha yüksək prioritetli sənəd varsa, öncə həmin sənəd çap olunur
+- Verilmiş m indeksli sənədin neçəci çapda olduğunu müəyyənləşdirin
+
+🧩 Funksiya
+
 printerQueue(int[] priorities, int m)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-Integer – &lt;strong&gt;m&lt;/strong&gt; indeksli sənədin neçəci sırada çap olunacağı
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Birinci sətirdə integer &lt;strong&gt;n&lt;/strong&gt; – sənədlərin sayı&lt;/li&gt;
-  &lt;li&gt;İkinci sətirdə n ədəd integer – sənədlərin prioritetləri&lt;/li&gt;
-  &lt;li&gt;Üçüncü sətirdə integer &lt;strong&gt;m&lt;/strong&gt; – izlənilən sənədin indeksi&lt;/li&gt;
-&lt;/ul&gt;
+Integer – m indeksli sənədin neçəci sırada çap olunacağı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+📥 Giriş Formatı
+
+- Birinci sətirdə integer n – sənədlərin sayı
+- İkinci sətirdə n ədəd integer – sənədlərin prioritetləri
+- Üçüncü sətirdə integer m – izlənilən sənədin indeksi
+
+⚙️ Məhdudiyyətlər
+
 1 ≤ n ≤ 1000
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-1 ≤ priority ≤ 9
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-0 ≤ m &amp;lt; n
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+1 ≤ priority ≤ 9
+
+0 ≤ m &amp;lt; n</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -2942,55 +2247,33 @@ Integer – &lt;strong&gt;m&lt;/strong&gt; indeksli sənədin neçəci sırada �
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔤 İlk Təkrarlanmayan Simvol
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Verilmiş simvol sətirində ilk təkrarlanmayan simvolu tapın. Əgər bütün simvollar təkrarlanırsa, xüsusi bir dəyər (məsələn '-') qaytarın.
 
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🔤 İlk Təkrarlanmayan Simvol&lt;/h1&gt;
+📌 Tapşırığın Şərti
 
-&lt;p&gt;
-Verilmiş simvol sətirində ilk təkrarlanmayan simvolu tapın. Əgər bütün simvollar təkrarlanırsa, xüsusi bir dəyər (məsələn &lt;strong&gt;'-'&lt;/strong&gt;) qaytarın.
-&lt;/p&gt;
+- Sətirdəki simvollar yalnız İngilis əlifbasının hərflərindən ibarətdir
+- Ən birinci təkrarlanmayan simvolu tapmaq lazımdır
+- Əgər belə simvol yoxdursa, '-' qaytarılmalıdır
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Sətirdəki simvollar yalnız İngilis əlifbasının hərflərindən ibarətdir&lt;/li&gt;
-  &lt;li&gt;Ən birinci təkrarlanmayan simvolu tapmaq lazımdır&lt;/li&gt;
-  &lt;li&gt;Əgər belə simvol yoxdursa, &lt;strong&gt;'-'&lt;/strong&gt; qaytarılmalıdır&lt;/li&gt;
-&lt;/ul&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 firstNonRepeatingChar(string s)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-Karakter – sətirdəki ilk təkrarlanmayan simvol və ya &lt;strong&gt;'-'&lt;/strong&gt; əgər yoxdur
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir sətirdə string s – analiz ediləcək simvol sətiri&lt;/li&gt;
-&lt;/ul&gt;
+Karakter – sətirdəki ilk təkrarlanmayan simvol və ya '-' əgər yoxdur
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+📥 Giriş Formatı
+
+- Bir sətirdə string s – analiz ediləcək simvol sətiri
+
+⚙️ Məhdudiyyətlər
+
 Sətir yalnız İngilis hərflərindən ibarət
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-1 ≤ |s| ≤ 10⁵
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+1 ≤ |s| ≤ 10⁵</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -3030,53 +2313,32 @@ Sətir yalnız İngilis hərflərindən ibarət
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🏗️ Hanoi Qüllələri
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Hanoi Qüllələri problemi klassik rekursiv məsələdir. Sizdə 3 dirək (A, B, C) və n disk var. Disklər ölçüyə görə sıralanıb və əvvəlcə A dirəyindədir. Məqsəd bütün diskləri C dirəyinə köçürməkdir, aşağıdakı qaydalara riayət edərək:
 
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🏗️ Hanoi Qüllələri&lt;/h1&gt;
+- Bir vaxtda yalnız bir disk köçürülə bilər
+- Heç bir zaman böyük disk kiçik diskin üzərinə qoyula bilməz
 
-&lt;p&gt;
-Hanoi Qüllələri problemi klassik rekursiv məsələdir. Sizdə 3 dirək (A, B, C) və &lt;strong&gt;n&lt;/strong&gt; disk var. Disklər ölçüyə görə sıralanıb və əvvəlcə A dirəyindədir. Məqsəd bütün diskləri C dirəyinə köçürməkdir, aşağıdakı qaydalara riayət edərək:
-&lt;/p&gt;
+📌 Tapşırığın Şərti
 
-&lt;ul&gt;
-  &lt;li&gt;Bir vaxtda yalnız bir disk köçürülə bilər&lt;/li&gt;
-  &lt;li&gt;Heç bir zaman böyük disk kiçik diskin üzərinə qoyula bilməz&lt;/li&gt;
-&lt;/ul&gt;
+- Hər disk hərəkəti "Move disk x from A to C" formatında çap olunmalıdır
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Hər disk hərəkəti &lt;strong&gt;"Move disk x from A to C"&lt;/strong&gt; formatında çap olunmalıdır&lt;/li&gt;
-&lt;/ul&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 solveHanoi(int n, char from, char to, char aux)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-Hər addımı bir sətirdə çap edir: &lt;strong&gt;Move disk x from A to C&lt;/strong&gt;
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir sətirdə integer &lt;strong&gt;n&lt;/strong&gt; — disk sayı&lt;/li&gt;
-&lt;/ul&gt;
+Hər addımı bir sətirdə çap edir: Move disk x from A to C
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-1 ≤ n ≤ 10
-&lt;/code&gt;
-&lt;/p&gt;
+📥 Giriş Formatı
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+- Bir sətirdə integer n — disk sayı
+
+⚙️ Məhdudiyyətlər
+
+1 ≤ n ≤ 10</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -3126,66 +2388,38 @@ Hər addımı bir sətirdə çap edir: &lt;strong&gt;Move disk x from A to C&lt;
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">💳 Kredit Kartı Nömrəsini Maskalamaq
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Kredit kartı nömrələri təhlükəsizlik məqsədilə tam göstərilməməlidir. Bu tapşırıqda verilmiş kredit kartı nömrəsinin ilk 12 rəqəmi maskalanacaq və yalnız son 4 rəqəm görünəcək. Nəticədə alınan string 4-lük qruplara bölünərək tire - ilə ayrılacaq.
 
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;💳 Kredit Kartı Nömrəsini Maskalamaq&lt;/h1&gt;
+📌 Tapşırığın Şərti
 
-&lt;p&gt;
-Kredit kartı nömrələri təhlükəsizlik məqsədilə tam göstərilməməlidir. Bu tapşırıqda verilmiş kredit kartı nömrəsinin ilk 12 rəqəmi maskalanacaq və yalnız son 4 rəqəm görünəcək. Nəticədə alınan string 4-lük qruplara bölünərək tire &lt;strong&gt;-&lt;/strong&gt; ilə ayrılacaq.
-&lt;/p&gt;
+- İlk 12 rəqəm * ilə əvəz olunmalıdır
+- Yalnız son 4 rəqəm görünməlidir
+- Əldə edilən nəticə 4-lük qruplara bölünərək tire ilə ayrılmalıdır
+- Əgər kart uzunluğu &gt; 16 isə əlavə rəqəmlər də maskalanacaq və eyni qayda ilə formatlanacaq
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;İlk 12 rəqəm &lt;strong&gt;*&lt;/strong&gt; ilə əvəz olunmalıdır&lt;/li&gt;
-  &lt;li&gt;Yalnız son 4 rəqəm görünməlidir&lt;/li&gt;
-  &lt;li&gt;Əldə edilən nəticə 4-lük qruplara bölünərək tire ilə ayrılmalıdır&lt;/li&gt;
-  &lt;li&gt;Əgər kart uzunluğu &gt; 16 isə əlavə rəqəmlər də maskalanacaq və eyni qayda ilə formatlanacaq&lt;/li&gt;
-&lt;/ul&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 maskCardNumber(String cardNumber)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-Maskalanmış və formatlanmış kredit kartı nömrəsi, məsələn: &lt;strong&gt;"****-****-****-5678"&lt;/strong&gt;
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir sətr: &lt;strong&gt;cardNumber&lt;/strong&gt; — kredit kartı nömrəsi (rəqəmlərdən ibarət)&lt;/li&gt;
-&lt;/ul&gt;
+Maskalanmış və formatlanmış kredit kartı nömrəsi, məsələn: "****-****-****-5678"
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+📥 Giriş Formatı
+
+- Bir sətr: cardNumber — kredit kartı nömrəsi (rəqəmlərdən ibarət)
+
+⚙️ Məhdudiyyətlər
+
 Kart nömrəsi yalnız rəqəmlərdən ibarət olmalıdır
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-Uzunluğu ≥ 16
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-İlk 12 rəqəm maskalanır, son 4 rəqəm görünür
-&lt;/code&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
-Çıxış 4-lük qruplar şəklində olmalıdır
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+Uzunluğu ≥ 16
+
+İlk 12 rəqəm maskalanır, son 4 rəqəm görünür
+
+Çıxış 4-lük qruplar şəklində olmalıdır</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -3242,50 +2476,34 @@ Uzunluğu ≥ 16
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">⌨️ Qırıq Klaviatura ilə Yazmaq
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;⌨️ Qırıq Klaviatura ilə Yazmaq&lt;/h1&gt;
-
-&lt;p&gt;
 Verilmiş bir cümləni yalnız işləyən düymələrdən istifadə edərək yazmaq mümkündürmü tapmaq lazımdır. Boşluqlar həmişə işləyir və yoxlanılmır.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Sentence-dəki bütün hərflər yalnız workingKeys-də olmalıdır&lt;/li&gt;
-  &lt;li&gt;Boşluqlar yoxlanılmır, onlar həmişə işləyir&lt;/li&gt;
-  &lt;li&gt;Əgər bütün hərflər işləyirsə, nəticə &lt;strong&gt;true&lt;/strong&gt;, əks halda &lt;strong&gt;false&lt;/strong&gt; qaytarılmalıdır&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Sentence-dəki bütün hərflər yalnız workingKeys-də olmalıdır
+- Boşluqlar yoxlanılmır, onlar həmişə işləyir
+- Əgər bütün hərflər işləyirsə, nəticə true, əks halda false qaytarılmalıdır
+
+🧩 Funksiya
+
 canType(String sentence, String workingKeys)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;Boolean — əgər cümlə yalnız işləyən düymələrdən istifadə edilərək yazıla bilərsə &lt;strong&gt;true&lt;/strong&gt;, əks halda &lt;strong&gt;false&lt;/strong&gt;&lt;/p&gt;
+🔁 Qaytarır
+Boolean — əgər cümlə yalnız işləyən düymələrdən istifadə edilərək yazıla bilərsə true, əks halda false
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Birinci sətir: &lt;strong&gt;sentence&lt;/strong&gt; — yazılmaq istənilən cümlə&lt;/li&gt;
-  &lt;li&gt;İkinci sətir: &lt;strong&gt;workingKeys&lt;/strong&gt; — işləyən düymələrin siyahısı&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;1 ≤ sentence.length ≤ 10⁵&lt;/li&gt;
-  &lt;li&gt;1 ≤ workingKeys.length ≤ 52&lt;/li&gt;
-  &lt;li&gt;Hərflər a-z, A-Z aralığında&lt;/li&gt;
-  &lt;li&gt;Boşluqlar həmişə işləyir, onları yoxlamağa ehtiyac yoxdur&lt;/li&gt;
-&lt;/ul&gt;
+- Birinci sətir: sentence — yazılmaq istənilən cümlə
+- İkinci sətir: workingKeys — işləyən düymələrin siyahısı
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- 1 ≤ sentence.length ≤ 10⁵
+- 1 ≤ workingKeys.length ≤ 52
+- Hərflər a-z, A-Z aralığında
+- Boşluqlar həmişə işləyir, onları yoxlamağa ehtiyac yoxdur</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -3327,45 +2545,29 @@ canType(String sentence, String workingKeys)
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔢 Pronic Nömrə Tapmaq
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🔢 Pronic Nömrə Tapmaq&lt;/h1&gt;
-
-&lt;p&gt;
 Pronic nömrə, iki ardıcıl tam ədədin hasilinə bərabər olan ədəddir. Məsələn, 6 bir pronic ədəddir, çünki 2 × 3 = 6.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Ədəd &lt;strong&gt;n&lt;/strong&gt; pronicdirsə true, yoxdursa false qaytarın&lt;/li&gt;
-  &lt;li&gt;Pronic nömrə: 0, 2, 6, 12, 20, 30, …&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Ədəd n pronicdirsə true, yoxdursa false qaytarın
+- Pronic nömrə: 0, 2, 6, 12, 20, 30, …
+
+🧩 Funksiya
+
 isPronic(int n)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;Boolean — əgər &lt;strong&gt;n&lt;/strong&gt; pronicdirsə true, yoxdursa false&lt;/p&gt;
+🔁 Qaytarır
+Boolean — əgər n pronicdirsə true, yoxdursa false
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir sətir: tək tam ədəd &lt;strong&gt;n&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;0 ≤ n ≤ 10⁶&lt;/li&gt;
-&lt;/ul&gt;
+- Bir sətir: tək tam ədəd n
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- 0 ≤ n ≤ 10⁶</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -3401,48 +2603,32 @@ isPronic(int n)
                     <div class="border-t border-slate-100 p-5 bg-white content-area hidden">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">✂️ Ən Qısa Sözü Tapmaq
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;✂️ Ən Qısa Sözü Tapmaq&lt;/h1&gt;
-
-&lt;p&gt;
 Verilmiş bir sətirdəki ən qısa sözü tapmaq tələb olunur. Sözlər boşluqlarla ayrılır və sətirdə yalnız hərflər mövcuddur.
 Ən qısa sözün uzunluğunu tapın. Əgər bir neçə ən qısa söz varsa, onlardan birini qaytarın.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırığın Şərti&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Sətirdəki ən qısa sözü tapın&lt;/li&gt;
-  &lt;li&gt;Əgər bir neçə ən qısa söz varsa, onlardan hər hansı birini qaytarın&lt;/li&gt;
-  &lt;li&gt;Sözlər yalnız hərflərdən ibarətdir və boşluqlarla ayrılır&lt;/li&gt;
-&lt;/ul&gt;
+📌 Tapşırığın Şərti
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- Sətirdəki ən qısa sözü tapın
+- Əgər bir neçə ən qısa söz varsa, onlardan hər hansı birini qaytarın
+- Sözlər yalnız hərflərdən ibarətdir və boşluqlarla ayrılır
+
+🧩 Funksiya
+
 shortestWord(String sentence)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;String — sətirdəki ən qısa söz&lt;/p&gt;
+🔁 Qaytarır
+String — sətirdəki ən qısa söz
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir sətr: &lt;strong&gt;sentence&lt;/strong&gt; (verilmiş sətir, içində sözlər və boşluqlar mövcuddur)&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;1 ≤ sentence.length ≤ 10⁵&lt;/li&gt;
-  &lt;li&gt;Sətirdə yalnız hərflər və boşluqlardan istifadə olunur&lt;/li&gt;
-&lt;/ul&gt;
+- Bir sətr: sentence (verilmiş sətir, içində sözlər və boşluqlar mövcuddur)
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- 1 ≤ sentence.length ≤ 10⁵
+- Sətirdə yalnız hərflər və boşluqlardan istifadə olunur</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -3483,56 +2669,40 @@ shortestWord(String sentence)
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f2f6fb;color:#222;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🏛️ Tam ədədi Roma rəqəminə çevirmək
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1e3a8a;"&gt;🏛️ Tam ədədi Roma rəqəminə çevirmək&lt;/h1&gt;
-
-&lt;p&gt;
 Verilmiş bir tam ədədi Roma rəqəminə çevirmək üçün bir funksiya yazın. Roma rəqəmləri müəyyən qaydalara əsaslanır və bu qaydalara əsasən 1-dən 3999-a qədər olan tam ədədlər Roma rəqəmləri ilə ifadə edilir.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Roma rəqəmləri&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;I = 1&lt;/li&gt;
-  &lt;li&gt;IV = 4&lt;/li&gt;
-  &lt;li&gt;V = 5&lt;/li&gt;
-  &lt;li&gt;IX = 9&lt;/li&gt;
-  &lt;li&gt;X = 10&lt;/li&gt;
-  &lt;li&gt;XL = 40&lt;/li&gt;
-  &lt;li&gt;L = 50&lt;/li&gt;
-  &lt;li&gt;XC = 90&lt;/li&gt;
-  &lt;li&gt;C = 100&lt;/li&gt;
-  &lt;li&gt;CD = 400&lt;/li&gt;
-  &lt;li&gt;D = 500&lt;/li&gt;
-  &lt;li&gt;CM = 900&lt;/li&gt;
-  &lt;li&gt;M = 1000&lt;/li&gt;
-&lt;/ul&gt;
+📌 Roma rəqəmləri
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+- I = 1
+- IV = 4
+- V = 5
+- IX = 9
+- X = 10
+- XL = 40
+- L = 50
+- XC = 90
+- C = 100
+- CD = 400
+- D = 500
+- CM = 900
+- M = 1000
+
+🧩 Funksiya
+
 intToRoman(int num)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;String — verilən tam ədədin Roma rəqəmi ilə ifadəsi&lt;/p&gt;
+🔁 Qaytarır
+String — verilən tam ədədin Roma rəqəmi ilə ifadəsi
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir tam ədəd &lt;strong&gt;num&lt;/strong&gt; (1 ≤ num ≤ 3999)&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;num yalnız 1-dən 3999-a qədər olan bir tam ədəd olacaq&lt;/li&gt;
-&lt;/ul&gt;
+- Bir tam ədəd num (1 ≤ num ≤ 3999)
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- num yalnız 1-dən 3999-a qədər olan bir tam ədəd olacaq</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -3576,44 +2746,28 @@ intToRoman(int num)
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f9fafb;color:#1f2937;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">♛ N-Queens Problemi
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1d4ed8;"&gt;♛ N-Queens Problemi&lt;/h1&gt;
-
-&lt;p&gt;
 Verilmiş n x n ölçülü şahmat lövhəsində n vəzir (queen) yerləşdirin ki, heç bir vəzir bir-birini təhdid etməsin. Vəzirlər eyni sətir, sütun və diaqonalda olmamalıdır.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırıq&lt;/h3&gt;
-&lt;p&gt;Bütün mümkün N-Queens yerləşdirmələrini geri qaytarın. Hər bir yerləşdirmə bir string massivində göstərilir (Q vəzir, . boş yer).&lt;/p&gt;
+📌 Tapşırıq
+Bütün mümkün N-Queens yerləşdirmələrini geri qaytarın. Hər bir yerləşdirmə bir string massivində göstərilir (Q vəzir, . boş yer).
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+🧩 Funksiya
+
 solveNQueens(int n)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 List of list of strings — hər bir siyahı bir yerləşdirməni göstərir
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir sətir: tam ədəd &lt;strong&gt;n&lt;/strong&gt; (1 ≤ n ≤ 10)&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;1 ≤ n ≤ 10&lt;/li&gt;
-&lt;/ul&gt;
+- Bir sətir: tam ədəd n (1 ≤ n ≤ 10)
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- 1 ≤ n ≤ 10</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -3677,46 +2831,29 @@ List of list of strings — hər bir siyahı bir yerləşdirməni göstərir
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f9fafb;color:#1f2937;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🌧️ Rainwater Trapping Problemi
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Verilmiş bir sıra hündürlüklər height[i] ilə təmsil olunan 1D mənzərədə yağış sularının tutula biləcək sahəsini hesablayın.
 
-&lt;h1 style="text-align:center;color:#1d4ed8;"&gt;🌧️ Rainwater Trapping Problemi&lt;/h1&gt;
+📌 Tapşırıq
+Sıradakı bloklar arasında yağışın tutula biləcəyi ümumi miqdarı geri qaytarın.
 
-&lt;p&gt;
-Verilmiş bir sıra hündürlüklər &lt;code&gt;height[i]&lt;/code&gt; ilə təmsil olunan 1D mənzərədə yağış sularının tutula biləcək sahəsini hesablayın.
-&lt;/p&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırıq&lt;/h3&gt;
-&lt;p&gt;Sıradakı bloklar arasında yağışın tutula biləcəyi ümumi miqdarı geri qaytarın.&lt;/p&gt;
-
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 trapRainWater(int[] height)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 Tək bir tam ədəd — suların tutula biləcəyi ümumi həcmi
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir sətir: tam ədəd &lt;strong&gt;n&lt;/strong&gt; — blok sayı (1 ≤ n ≤ 10&lt;sup&gt;5&lt;/sup&gt;)&lt;/li&gt;
-  &lt;li&gt;Növbəti sətir: n ədəd space ilə ayrılmış &lt;code&gt;height[i]&lt;/code&gt; (0 ≤ height[i] ≤ 10&lt;sup&gt;5&lt;/sup&gt;)&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;1 ≤ n ≤ 10&lt;sup&gt;5&lt;/sup&gt;&lt;/li&gt;
-  &lt;li&gt;0 ≤ height[i] ≤ 10&lt;sup&gt;5&lt;/sup&gt;&lt;/li&gt;
-&lt;/ul&gt;
+- Bir sətir: tam ədəd n — blok sayı (1 ≤ n ≤ 10^5)
+- Növbəti sətir: n ədəd space ilə ayrılmış height[i] (0 ≤ height[i] ≤ 10^5)
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- 1 ≤ n ≤ 10^5  - 0 ≤ height[i] ≤ 10^5</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -3767,45 +2904,29 @@ Tək bir tam ədəd — suların tutula biləcəyi ümumi həcmi
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f9fafb;color:#1f2937;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">💻 Decimal to Binary
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1d4ed8;"&gt;💻 Decimal to Binary&lt;/h1&gt;
-
-&lt;p&gt;
 Verilmiş bir tam ədədin ikilik (binary) sisteminə çevrilməsini təmin edən bir funksiya yazın. 
 İkilik sistemində ədəd yalnız 0 və 1 rəqəmlərindən ibarətdir.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırıq&lt;/h3&gt;
-&lt;p&gt;Verilmiş bir tam ədədin ikilik sistemdəki təmsilini qaytaran &lt;code&gt;decToBin&lt;/code&gt; funksiyasını yazın.&lt;/p&gt;
+📌 Tapşırıq
+Verilmiş bir tam ədədin ikilik sistemdəki təmsilini qaytaran decToBin funksiyasını yazın.
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+🧩 Funksiya
+
 decToBin(int num)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 String — ədədin ikilik (binary) sistemdəki təmsili
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir tam ədəd &lt;strong&gt;num&lt;/strong&gt; (-10&lt;sup&gt;6&lt;/sup&gt; ≤ num ≤ 10&lt;sup&gt;6&lt;/sup&gt;)&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;num yalnız tam ədədlərdən ibarət olacaq&lt;/li&gt;
-&lt;/ul&gt;
+- Bir tam ədəd num (-10^6 ≤ num ≤ 10^6)
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- num yalnız tam ədədlərdən ibarət olacaq</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -3858,47 +2979,30 @@ String — ədədin ikilik (binary) sistemdəki təmsili
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f9fafb;color:#1f2937;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🌀 Spiral Matrix
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Verilmiş n x m ölçülü bir matrisin elementlərini spiral şəkildə sıralayıb qaytarın.
 
-&lt;h1 style="text-align:center;color:#1d4ed8;"&gt;🌀 Spiral Matrix&lt;/h1&gt;
+📌 Tapşırıq
 
-&lt;p&gt;
-Verilmiş &lt;strong&gt;n x m&lt;/strong&gt; ölçülü bir matrisin elementlərini spiral şəkildə sıralayıb qaytarın.
-&lt;/p&gt;
+spiralOrder funksiyasını tamamlayın ki, verilmiş bir matrisin elementlərini spiral şəkildə sıralasın.
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırıq&lt;/h3&gt;
-&lt;p&gt;
-&lt;code&gt;spiralOrder&lt;/code&gt; funksiyasını tamamlayın ki, verilmiş bir matrisin elementlərini spiral şəkildə sıralasın.
-&lt;/p&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 spiralOrder(int[][] matrix)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 List&amp;lt;Integer&amp;gt; — Spiral şəkildə sıralanmış matrisin bütün elementlərini ehtiva edən siyahı
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;matrix.length (n) 2 ≤ n ≤ 100&lt;/li&gt;
-  &lt;li&gt;matrix[0].length (m) 2 ≤ m ≤ 100&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Hər bir sətir və sütun ən azı 2 ölçüsündə olacaq.&lt;/li&gt;
-&lt;/ul&gt;
+- matrix.length (n) 2 ≤ n ≤ 100
+- matrix[0].length (m) 2 ≤ m ≤ 100
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- Hər bir sətir və sütun ən azı 2 ölçüsündə olacaq.</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -3963,54 +3067,37 @@ List&amp;lt;Integer&amp;gt; — Spiral şəkildə sıralanmış matrisin bütün
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f9fafb;color:#1f2937;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔄 Linked List Cycle Detection
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Verilmiş tək istiqamətli linked listdə cycle (dövr) olub-olmadığını tapmaq tələb olunur.
+Cycle — son node-un növbəti göstəricisinin (next) null yox, əvvəlki node-lardan birinə işarə etməsidir.
 
-&lt;h1 style="text-align:center;color:#1d4ed8;"&gt;🔄 Linked List Cycle Detection&lt;/h1&gt;
+📌 Tapşırıq
 
-&lt;p&gt;
-Verilmiş tək istiqamətli linked listdə &lt;strong&gt;cycle&lt;/strong&gt; (dövr) olub-olmadığını tapmaq tələb olunur.
-Cycle — son node-un növbəti göstəricisinin (&lt;code&gt;next&lt;/code&gt;) &lt;code&gt;null&lt;/code&gt; yox, əvvəlki node-lardan birinə işarə etməsidir.
-&lt;/p&gt;
+hasCycle funksiyasını tamamlayın.
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırıq&lt;/h3&gt;
-&lt;p&gt;
-&lt;code&gt;hasCycle&lt;/code&gt; funksiyasını tamamlayın.
-&lt;/p&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 hasCycle(ListNode head)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-boolean — əgər dövr varsa &lt;code&gt;true&lt;/code&gt;, yoxdursa &lt;code&gt;false&lt;/code&gt;
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;p&gt;Linked list &lt;code&gt;head&lt;/code&gt; olaraq verilir&lt;/p&gt;
-&lt;p&gt;ListNode strukturu:&lt;/p&gt;
-&lt;pre style="background:#f1f5f9;padding:10px;border-radius:5px;"&gt;
+boolean — əgər dövr varsa true, yoxdursa false
+
+📥 Giriş Formatı
+Linked list head olaraq verilir
+ListNode strukturu:
+
 class ListNode {
     int val;
     ListNode next;
     ListNode(int x) { val = x; next = null; }
 }
-&lt;/pre&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;1 ≤ listin uzunluğu ≤ 10⁵&lt;/li&gt;
-  &lt;li&gt;Həll O(n) zaman və O(1) yaddaş istifadə etməlidir.&lt;/li&gt;
-&lt;/ul&gt;
+⚙️ Məhdudiyyətlər
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+- 1 ≤ listin uzunluğu ≤ 10⁵
+- Həll O(n) zaman və O(1) yaddaş istifadə etməlidir.</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -4063,47 +3150,30 @@ class ListNode {
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f9fafb;color:#1f2937;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔢 Tam Ədədi Sözlə İfadə Etmək (Azərbaycan dili)
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1d4ed8;"&gt;🔢 Tam Ədədi Sözlə İfadə Etmək (Azərbaycan dili)&lt;/h1&gt;
-
-&lt;p&gt;
 Verilmiş tam ədədi Azərbaycan dilində sözlə ifadə edin. Əlavə funksiyalardan istifadə etmədən bütün əməliyyat birbaşa həyata keçirilir.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırıq&lt;/h3&gt;
-&lt;p&gt;
-&lt;code&gt;numberToWordsAZ&lt;/code&gt; funksiyasını tamamlayın.
-&lt;/p&gt;
+📌 Tapşırıq
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+numberToWordsAZ funksiyasını tamamlayın.
+
+🧩 Funksiya
+
 numberToWordsAZ(int num)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 String — ədədin Azərbaycan dilində sözlə ifadəsi
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir tam ədəd &lt;strong&gt;num&lt;/strong&gt; (0 ≤ num ≤ 999999)&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;0 ≤ num ≤ 999999&lt;/li&gt;
-  &lt;li&gt;Əlavə köməkçi funksiyalardan istifadə edilmədən birbaşa həll yazılmalıdır.&lt;/li&gt;
-&lt;/ul&gt;
+- Bir tam ədəd num (0 ≤ num ≤ 999999)
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- 0 ≤ num ≤ 999999
+- Əlavə köməkçi funksiyalardan istifadə edilmədən birbaşa həll yazılmalıdır.</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -4165,49 +3235,31 @@ String — ədədin Azərbaycan dilində sözlə ifadəsi
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f9fafb;color:#1f2937;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">👮‍♂️ Polis və Oğru Problemi
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Bir xətt boyunca yerləşdirilmiş polislər və oğrular var. Hər polis yalnız bir oğrunu tutmağa çalışır və hər oğru yalnız bir polis tərəfindən tutulur. Polis və oğrular arasında müəyyən bir məsafə k var. Məqsəd, hər bir polisə ən yaxın olan oğrunu tutmaq və tutulmuş oğruların sayını tapmaqdır.
 
-&lt;h1 style="text-align:center;color:#1d4ed8;"&gt;👮‍♂️ Polis və Oğru Problemi&lt;/h1&gt;
+📌 Tapşırıq
 
-&lt;p&gt;
-Bir xətt boyunca yerləşdirilmiş polislər və oğrular var. Hər polis yalnız bir oğrunu tutmağa çalışır və hər oğru yalnız bir polis tərəfindən tutulur. Polis və oğrular arasında müəyyən bir məsafə &lt;strong&gt;k&lt;/strong&gt; var. Məqsəd, hər bir polisə ən yaxın olan oğrunu tutmaq və tutulmuş oğruların sayını tapmaqdır.
-&lt;/p&gt;
+Verilmiş arr massivindəki polislərə ən yaxın oğruları tapın və tutulmuş oğruların sayını geri qaytarın.
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırıq&lt;/h3&gt;
-&lt;p&gt;
-Verilmiş &lt;code&gt;arr&lt;/code&gt; massivindəki polislərə ən yaxın oğruları tapın və tutulmuş oğruların sayını geri qaytarın.
-&lt;/p&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 catchThieves(char[] arr, int k)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 int — Tutulmuş oğruların sayı
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir sətir: &lt;strong&gt;arr[]&lt;/strong&gt; (char array) — polislər və oğruların xətt üzrə yerləşməsi. 'P' — polis, 'T' — oğru&lt;/li&gt;
-  &lt;li&gt;Bir tam ədəd: &lt;strong&gt;k&lt;/strong&gt; — polis və oğru arasında maksimum məsafə&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;1 ≤ arr.length ≤ 10&lt;sup&gt;5&lt;/sup&gt;&lt;/li&gt;
-  &lt;li&gt;1 ≤ k ≤ arr.length&lt;/li&gt;
-  &lt;li&gt;arr[i] yalnız 'P' və 'T' ola bilər&lt;/li&gt;
-&lt;/ul&gt;
+- Bir sətir: arr[] (char array) — polislər və oğruların xətt üzrə yerləşməsi. 'P' — polis, 'T' — oğru
+- Bir tam ədəd: k — polis və oğru arasında maksimum məsafə
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- 1 ≤ arr.length ≤ 10^5  - 1 ≤ k ≤ arr.length
+- arr[i] yalnız 'P' və 'T' ola bilər</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -4258,49 +3310,32 @@ int — Tutulmuş oğruların sayı
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f9fafb;color:#1f2937;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">💰 Sikkə Dəyişikliyi Problemi
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1d4ed8;"&gt;💰 Sikkə Dəyişikliyi Problemi&lt;/h1&gt;
-
-&lt;p&gt;
 Verilmiş bir sikkə dəsti və bir məbləğ verilir. Məqsəd, verilmiş məbləği, verilmiş sikkələrdən istifadə edərək ən azı neçə yolla dəyişə biləcəyinizi tapmaqdır.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırıq&lt;/h3&gt;
-&lt;p&gt;
-Verilmiş &lt;code&gt;coins&lt;/code&gt; massivindəki sikkələrdən istifadə edərək &lt;code&gt;amount&lt;/code&gt; məbləğini dəyişdirmək üçün mövcud fərqli yolların sayını tapın.
-&lt;/p&gt;
+📌 Tapşırıq
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+Verilmiş coins massivindəki sikkələrdən istifadə edərək amount məbləğini dəyişdirmək üçün mövcud fərqli yolların sayını tapın.
+
+🧩 Funksiya
+
 coinChangeWays(int[] coins, int amount)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 int — Məbləği dəyişdirmək üçün istifadə edilə biləcək fərqli yolların sayı
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Birinci sətir: &lt;strong&gt;coins[]&lt;/strong&gt; (tam ədəd array) — istifadə edilə biləcək sikkələr&lt;/li&gt;
-  &lt;li&gt;İkinci sətir: &lt;strong&gt;amount&lt;/strong&gt; (tam ədəd) — dəyişdirilməli olan məbləğ&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;1 ≤ coins.length ≤ 1000&lt;/li&gt;
-  &lt;li&gt;1 ≤ amount ≤ 5000&lt;/li&gt;
-  &lt;li&gt;1 ≤ coins[i] ≤ 5000&lt;/li&gt;
-&lt;/ul&gt;
+- Birinci sətir: coins[] (tam ədəd array) — istifadə edilə biləcək sikkələr
+- İkinci sətir: amount (tam ədəd) — dəyişdirilməli olan məbləğ
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- 1 ≤ coins.length ≤ 1000
+- 1 ≤ amount ≤ 5000
+- 1 ≤ coins[i] ≤ 5000</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -4342,47 +3377,30 @@ int — Məbləği dəyişdirmək üçün istifadə edilə biləcək fərqli yol
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f9fafb;color:#1f2937;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔍 Rotasiya Edilmiş Array-də Ən Kiçik Element
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1d4ed8;"&gt;🔍 Rotasiya Edilmiş Array-də Ən Kiçik Element&lt;/h1&gt;
-
-&lt;p&gt;
 Verilmiş sıralanmış array-in müəyyən bir nöqtəyə qədər rotasiya olunduğunu düşünün. Məqsəd rotasiya edilmiş array-də ən kiçik elementi tapmaqdır.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırıq&lt;/h3&gt;
-&lt;p&gt;
+📌 Tapşırıq
+
 Binary search metodundan istifadə edərək rotasiya edilmiş array-də ən kiçik elementin dəyərini tapın.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+🧩 Funksiya
+
 findMinInRotatedArray(int[] nums)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 int — Rotasiya edilmiş array-dəki ən kiçik elementin dəyəri
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Birinci sətir: &lt;strong&gt;nums[]&lt;/strong&gt; — Rotasiya edilmiş sıralanmış array&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;1 ≤ nums.length ≤ 5000&lt;/li&gt;
-  &lt;li&gt;nums[i] yalnız tam ədəd və unikal olmalıdır&lt;/li&gt;
-&lt;/ul&gt;
+- Birinci sətir: nums[] — Rotasiya edilmiş sıralanmış array
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- 1 ≤ nums.length ≤ 5000
+- nums[i] yalnız tam ədəd və unikal olmalıdır</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -4427,47 +3445,30 @@ int — Rotasiya edilmiş array-dəki ən kiçik elementin dəyəri
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f9fafb;color:#1f2937;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔠 Sətirdə Unikal Hərflərin Yoxlanması
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+Verilmiş bir sətirdəki bütün hərflərin unikal olub-olmadığını yoxlayın. Yəni, sətirdə eyni hərf bir neçə dəfə təkrarlanarsa, nəticə false, əks halda true olacaq.
 
-&lt;h1 style="text-align:center;color:#1d4ed8;"&gt;🔠 Sətirdə Unikal Hərflərin Yoxlanması&lt;/h1&gt;
+📌 Tapşırıq
 
-&lt;p&gt;
-Verilmiş bir sətirdəki bütün hərflərin unikal olub-olmadığını yoxlayın. Yəni, sətirdə eyni hərf bir neçə dəfə təkrarlanarsa, nəticə &lt;strong&gt;false&lt;/strong&gt;, əks halda &lt;strong&gt;true&lt;/strong&gt; olacaq.
-&lt;/p&gt;
-
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırıq&lt;/h3&gt;
-&lt;p&gt;
 hasUniqueChars funksiyasını yazın ki, verilmiş sətirdəki bütün hərflərin unikal olub-olmadığını müəyyən etsin.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+🧩 Funksiya
+
 hasUniqueChars(String s)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
-boolean — əgər sətirdəki hərflər unikal olarsa &lt;strong&gt;true&lt;/strong&gt;, əks halda &lt;strong&gt;false&lt;/strong&gt;
-&lt;/p&gt;
+🔁 Qaytarır
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir sətir: &lt;strong&gt;s&lt;/strong&gt; — yoxlanacaq sətir (yalnız hərflər və rəqəmlər)&lt;/li&gt;
-&lt;/ul&gt;
+boolean — əgər sətirdəki hərflər unikal olarsa true, əks halda false
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;1 ≤ s.length ≤ 10⁶&lt;/li&gt;
-  &lt;li&gt;s yalnız kiçik və böyük hərflər və rəqəmlərdən ibarət ola bilər&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+- Bir sətir: s — yoxlanacaq sətir (yalnız hərflər və rəqəmlər)
+
+⚙️ Məhdudiyyətlər
+
+- 1 ≤ s.length ≤ 10⁶
+- s yalnız kiçik və böyük hərflər və rəqəmlərdən ibarət ola bilər</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -4509,46 +3510,29 @@ boolean — əgər sətirdəki hərflər unikal olarsa &lt;strong&gt;true&lt;/st
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f9fafb;color:#1f2937;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">♦ Paxlava Nümunəsi Çapı
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1d4ed8;"&gt;♦ Paxlava Nümunəsi Çapı&lt;/h1&gt;
-
-&lt;p&gt;
 Bu tapşırıqda istifadəçiyə paxlava (diamond) formasında nümunə çap etməyi öyrənmək məqsəd qoyulub. İstifadəçi verilmiş ölçüyə uyğun paxlava formasını çap etməlidir.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırıq&lt;/h3&gt;
-&lt;p&gt;
+📌 Tapşırıq
+
 printDiamond funksiyasını tamamlayın ki, verilmiş ölçüyə uyğun paxlava nümunəsini qaytarsın.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+🧩 Funksiya
+
 printDiamond(int n)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 String — çap ediləcək paxlava formasını bir string kimi qaytarır
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir tam ədəd &lt;strong&gt;n&lt;/strong&gt; — paxlava formasının ölçüsü (orta sətirin uzunluğunu təyin edir)&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;1 ≤ n ≤ 100&lt;/li&gt;
-&lt;/ul&gt;
+- Bir tam ədəd n — paxlava formasının ölçüsü (orta sətirin uzunluğunu təyin edir)
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- 1 ≤ n ≤ 100</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -4602,47 +3586,30 @@ String — çap ediləcək paxlava formasını bir string kimi qaytarır
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f9fafb;color:#1f2937;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔄 Matrisin Transponası
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1d4ed8;"&gt;🔄 Matrisin Transponası&lt;/h1&gt;
-
-&lt;p&gt;
 Bu tapşırıqda, verilmiş bir matrisi transponirə etmək tələb olunur. Transponasiya prosesində matrisin sətirləri sütunlara, sütunlar isə sətirlərə çevrilir.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırıq&lt;/h3&gt;
-&lt;p&gt;
+📌 Tapşırıq
+
 transposeMatrix funksiyasını tamamlayın ki, verilmiş matrisin transponası alınıb qaytarılsın.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+🧩 Funksiya
+
 transposeMatrix(int[][] matrix)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 int[][] — transponirə edilmiş matris
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir matris &lt;strong&gt;matrix&lt;/strong&gt; (iki ölçülü array)&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;1 ≤ matrix.length ≤ 100&lt;/li&gt;
-  &lt;li&gt;1 ≤ matrix[i].length ≤ 100&lt;/li&gt;
-&lt;/ul&gt;
+- Bir matris matrix (iki ölçülü array)
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- 1 ≤ matrix.length ≤ 100
+- 1 ≤ matrix[i].length ≤ 100</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -4684,46 +3651,29 @@ int[][] — transponirə edilmiş matris
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f9fafb;color:#1f2937;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔄 Anagram Yoxlama
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1d4ed8;"&gt;🔄 Anagram Yoxlama&lt;/h1&gt;
-
-&lt;p&gt;
 Bu tapşırıqda, verilmiş iki sətirin anagram olub-olmadığını yoxlamaq tələb olunur. Anagram olmaq üçün iki söz eyni hərfləri eyni sayda ehtiva etməli, lakin fərqli sıralanmış ola bilərlər.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırıq&lt;/h3&gt;
-&lt;p&gt;
+📌 Tapşırıq
+
 areAnagrams funksiyasını tamamlayın ki, verilmiş iki sətirin anagram olub-olmadığını yoxlasın.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+🧩 Funksiya
+
 areAnagrams(String str1, String str2)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 boolean — əgər sətirlər anagramdırsa true, əks halda false qaytarır
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;İki sətir: &lt;strong&gt;str1&lt;/strong&gt; və &lt;strong&gt;str2&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;1 ≤ str1.length, str2.length ≤ 10⁵&lt;/li&gt;
-&lt;/ul&gt;
+- İki sətir: str1 və str2
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- 1 ≤ str1.length, str2.length ≤ 10⁵</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -4773,55 +3723,36 @@ boolean — əgər sətirlər anagramdırsa true, əks halda false qaytarır
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f9fafb;color:#1f2937;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🎭 Teatr Oturacaqları
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
-
-&lt;h1 style="text-align:center;color:#1d4ed8;"&gt;🎭 Teatr Oturacaqları&lt;/h1&gt;
-
-&lt;p&gt;
 Bu tapşırıqda, teatrın oturacaqlarının sıralamasında hər bir arxa sıradakı oturacaq ön sıradakı oturacaqdan daha hündür olmalıdır. Əgər bu qayda pozulursa, həmin oturacaq "kəsilmiş" hesab edilir və bu oturacaqların nömrələri qaytarılmalıdır.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırıq&lt;/h3&gt;
-&lt;p&gt;
+📌 Tapşırıq
+
 Verilən teatrın oturacaqlarının sıralamasında, hər bir oturacaq nömrəsi, oturacağın sıra (row) və sütun (col) indekslərindən istifadə edərək hesablanır:
-&lt;/p&gt;
-&lt;p&gt;
-&lt;strong&gt;Oturacaq nömrəsi:&lt;/strong&gt; (row * cols) + col + 1
-&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;row: Satırın indeksidir (sıfırdan başlayır).&lt;/li&gt;
-  &lt;li&gt;col: Sütunun indeksidir (sıfırdan başlayır).&lt;/li&gt;
-  &lt;li&gt;1 əlavə olunur: Çünki nömrələmə 1-dən başlamalıdır.&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
+Oturacaq nömrəsi: (row * cols) + col + 1
+
+- row: Satırın indeksidir (sıfırdan başlayır).
+- col: Sütunun indeksidir (sıfırdan başlayır).
+- 1 əlavə olunur: Çünki nömrələmə 1-dən başlamalıdır.
+
+🧩 Funksiya
+
 getBlockedSeats(int[][] seats)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 List&lt;Integer&gt; — qarşısı kəsilən oturacaqların nömrələrini saxlayan siyahı.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bir 2D massiv &lt;strong&gt;seats&lt;/strong&gt; veriləcək.&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;1 ≤ seats.length ≤ 100&lt;/li&gt;
-  &lt;li&gt;1 ≤ seats[i].length ≤ 100&lt;/li&gt;
-&lt;/ul&gt;
+- Bir 2D massiv seats veriləcək.
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- 1 ≤ seats.length ≤ 100
+- 1 ≤ seats[i].length ≤ 100</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -4866,43 +3797,28 @@ List&lt;Integer&gt; — qarşısı kəsilən oturacaqların nömrələrini saxla
                     <div class="hidden border-t border-slate-100 p-5 bg-white content-area">
                         <div class="mb-5">
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Təsvir</h4>
-                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">&lt;body style="font-family:Arial,sans-serif;background:#f9fafb;color:#1f2937;padding:40px;"&gt;
+                            <p class="text-slate-700 whitespace-pre-line text-sm leading-relaxed">🔄 Stringin Sıxılması
 
-&lt;div style="max-width:800px;margin:auto;background:#ffffff;padding:30px;border-radius:10px;
-            box-shadow:0 6px 18px rgba(0,0,0,0.1);"&gt;
+📌 Tapşırıq
 
-&lt;h1 style="text-align:center;color:#1d4ed8;"&gt;🔄 Stringin Sıxılması&lt;/h1&gt;
+Stringdəki təkrarlanan xarakterləri, həmin xarakterlərin təkrarlanma sayını göstərən rəqəmlərlə əvəz edərək sıxılma əməliyyatı aparın. Məsələn,  "aaabbbccc"  stringi  "a3b3c3"  kimi sıxılacaq. Əgər sıxılmış string verilmiş stringdən daha uzundursa, o zaman verilmiş stringi qaytarın. Məsələn,  "abcd"  stringi  "a1b1c1d1"  kimi sıxılacaq, lakin verilmiş string  "abcd"  daha qısa olduğu üçün  "abcd"  qaytarılır.
 
-&lt;h3 style="color:#2563eb;"&gt;📌 Tapşırıq&lt;/h3&gt;
-&lt;p&gt;
-Stringdəki təkrarlanan xarakterləri, həmin xarakterlərin təkrarlanma sayını göstərən rəqəmlərlə əvəz edərək sıxılma əməliyyatı aparın. Məsələn,  &lt;strong&gt;"aaabbbccc" &lt;/strong&gt; stringi  &lt;strong&gt;"a3b3c3" &lt;/strong&gt; kimi sıxılacaq. Əgər sıxılmış string verilmiş stringdən daha uzundursa, o zaman verilmiş stringi qaytarın. Məsələn,  &lt;strong&gt;"abcd" &lt;/strong&gt; stringi  &lt;strong&gt;"a1b1c1d1" &lt;/strong&gt; kimi sıxılacaq, lakin verilmiş string  &lt;strong&gt;"abcd" &lt;/strong&gt; daha qısa olduğu üçün  &lt;strong&gt;"abcd" &lt;/strong&gt; qaytarılır.
-&lt;/p&gt;
+🧩 Funksiya
 
-&lt;h3 style="color:#2563eb;"&gt;🧩 Funksiya&lt;/h3&gt;
-&lt;p&gt;
-&lt;code style="background:#eef2ff;padding:4px 8px;border-radius:5px;color:#1e3a8a;"&gt;
 compressString(String s)
-&lt;/code&gt;
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;🔁 Qaytarır&lt;/h3&gt;
-&lt;p&gt;
+🔁 Qaytarır
+
 String — Sıxılacaq stringin sıxılmış versiyası.
-&lt;/p&gt;
 
-&lt;h3 style="color:#2563eb;"&gt;📥 Giriş Formatı&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;String &lt;strong&gt;s&lt;/strong&gt;: Hər hansı uzunluqda string (1 ≤ s.length ≤ 1000).&lt;/li&gt;
-&lt;/ul&gt;
+📥 Giriş Formatı
 
-&lt;h3 style="color:#2563eb;"&gt;⚙️ Məhdudiyyətlər&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Boşluqlar və xüsusi simvollar ola bilər.&lt;/li&gt;
-  &lt;li&gt;Hər bir xarakterin sayı ən çox 1000-dən böyük olmayacaq.&lt;/li&gt;
-&lt;/ul&gt;
+- String s: Hər hansı uzunluqda string (1 ≤ s.length ≤ 1000).
 
-&lt;/div&gt;
-&lt;/body&gt;</p>
+⚙️ Məhdudiyyətlər
+
+- Boşluqlar və xüsusi simvollar ola bilər.
+- Hər bir xarakterin sayı ən çox 1000-dən böyük olmayacaq.</p>
                         </div>
                         <div>
                             <h4 class="text-xs uppercase font-bold text-slate-400 mb-2">Həll Kodu (C++)</h4>
@@ -5151,7 +4067,6 @@ String — Sıxılacaq stringin sıxılmış versiyası.
 				if (msg.data == 'reload') window.location.reload();
 				else if (msg.data == 'refreshcss') refreshCSS();
 			};
-			
 			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
 				console.log('Live reload enabled.');
 				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
